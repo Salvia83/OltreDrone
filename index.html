@@ -14,6 +14,31 @@
   <meta property="og:image" content="./mavic3t_oltrepo.jpg">
   <meta property="og:url" content="https://www.oltredrone.it">
 
+  <!-- Google tag (gtag.js) - Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSLHM5Q2DQ"></script>
+  <script>
+    // Sistema di Esclusione Visite Proprietario (Modalità Admin)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('ignora') === 'me') {
+      localStorage.setItem('oltredrone_exclude_analytics', 'true');
+      alert('🔒 Modalità Proprietario ATTIVA:\nLe visite effettuate da questo browser NON verranno conteggiate su Google Analytics.');
+    } else if (urlParams.get('ignora') === 'reset') {
+      localStorage.removeItem('oltredrone_exclude_analytics');
+      alert('Tracciamento riattivato per questo browser.');
+    }
+
+    if (localStorage.getItem('oltredrone_exclude_analytics') === 'true') {
+      window['ga-disable-G-KSLHM5Q2DQ'] = true;
+      console.log('Google Analytics DISATTIVATO per dispositivo proprietario.');
+    }
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-KSLHM5Q2DQ');
+  </script>
+
   <style>
     :root {
       --bg: #090d16;
@@ -411,7 +436,7 @@
 
     <!-- Action Buttons & Socials -->
     <section class="actions">
-      <a href="mailto:info@oltredrone.it" class="btn-contact">
+      <a href="mailto:info@oltredrone.it" class="btn-contact" onclick="if(typeof gtag==='function') gtag('event', 'click_contact_email', {'event_category': 'lead', 'event_label': 'email_preventivo'});">
         ✉️ Contattaci per Informazioni e Preventivi
       </a>
 
