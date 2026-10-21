@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="it"><head><meta name="robots" content="noindex, nofollow"/>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab_detail" name="shell-type"/><title>Viticoltura 4.0 &amp; Monitoraggio Vigneti | Oltre Drone</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#7bd0ff", "secondary-container": "#00a572", "on-secondary": "#003824", "on-tertiary": "#552100", "on-primary-fixed-variant": "#004c69", "primary-container": "#38bdf8", "inverse-primary": "#00668a", "on-error": "#690005", "outline-variant": "#3e484f", "inverse-on-surface": "#2c303a", "on-tertiary-fixed-variant": "#783200", "on-primary": "#00354a", "inverse-surface": "#dfe2ef", "tertiary-fixed-dim": "#ffb690", "surface-container-lowest": "#0a0e17", "secondary-fixed-dim": "#4edea3", "surface-dim": "#0f131c", "on-tertiary-container": "#743000", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#341100", "outline": "#87929a", "on-secondary-container": "#00311f", "primary-fixed": "#c4e7ff", "error": "#ffb4ab", "on-surface-variant": "#bdc8d1", "tertiary-container": "#ff975d", "surface-container": "#1c1f29", "tertiary-fixed": "#ffdbca", "tertiary": "#ffbf9e", "surface-container-highest": "#31353f", "background": "#0f131c", "surface": "#0f131c", "surface-container-low": "#181b25", "on-secondary-fixed-variant": "#005236", "error-container": "#93000a", "on-surface": "#dfe2ef", "surface-container-high": "#262a34", "surface-tint": "#7bd0ff", "on-primary-container": "#004965", "on-background": "#dfe2ef", "on-primary-fixed": "#001e2c", "surface-bright": "#353943", "secondary-fixed": "#6ffbbe", "primary": "#8ed5ff", "on-secondary-fixed": "#002113", "secondary": "#4edea3", "surface-variant": "#31353f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "margin": "3rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "margin-mobile": "1.25rem", "space-md": "1rem" }, fontFamily: { "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-metric-val": ["JetBrains Mono"], "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-telemetry": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-xl-mobile": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-md": ["1.75rem", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }], "label-metric-val": ["1.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-xl": ["3.5rem", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-sm": ["1.25rem", { lineHeight: "1.4", letterSpacing: "0", fontWeight: "600" }], "body-sm": ["0.875rem", { lineHeight: "1.5", letterSpacing: "0", fontWeight: "400" }], "label-badge": ["0.75rem", { lineHeight: "1.2", letterSpacing: "0.08em", fontWeight: "600" }], "headline-lg": ["2.5rem", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg-mobile": ["1.75rem", { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "700" }], "label-telemetry": ["0.875rem", { lineHeight: "1.4", letterSpacing: "0.05em", fontWeight: "500" }], "body-lg": ["1.125rem", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }], "body-md": ["1rem", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }] } } } };</script></head><body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><a aria-label="Torna alla Home" class="w-11 h-11 -ml-1.5 flex items-center justify-center text-on-surface hover:text-primary-container transition-colors rounded" data-path="oltre-drone---rilievi-aerei-di-precisione-&amp;-termografia" href="#"><span class="material-symbols-outlined text-[24px]">arrow_back</span></a><div class="flex flex-col justify-center min-w-0"><div class="flex items-center gap-1.5"><span class="font-label-badge text-[11px] text-on-surface-variant uppercase tracking-wider truncate">Home</span><span class="text-outline-variant text-[12px]">/</span><span class="font-label-badge text-[11px] text-primary-container font-semibold uppercase tracking-wider truncate">Viticoltura 4.0</span></div><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-headline-sm text-[13px] tracking-tight text-on-surface uppercase truncate font-bold">NDVI &amp; Vigore</span></div></div></div><div class="flex items-center gap-space-xs"><a class="h-11 px-3.5 rounded bg-primary-container hover:bg-primary text-on-primary-container flex items-center justify-center font-headline-sm text-body-sm font-semibold tracking-tight transition-colors" data-path="richiesta-preventivo" href="preventivo.html"><span class="material-symbols-outlined text-[18px] mr-1">flight_takeoff</span><span>Preventivo</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-background pt-16 pb-24 relative"><div class="flex flex-col w-full">
+<!-- Interactive Style Scrim & Ambient Heat Glow (No background color on outer wrapper) -->
+<div class="relative w-full overflow-hidden px-gutter-mobile py-space-md space-y-space-lg">
+<!-- Top Ambient Flare -->
+<div class="absolute -top-24 left-1/2 -translate-x-1/2 w-80 h-64 bg-tertiary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-96 -right-20 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+<!-- 1. Technical Badges & Breadcrumb Cluster -->
+<section class="relative z-10 space-y-space-xs">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Home</span>
+<span class="text-outline-variant font-label-badge">/</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase tracking-wider">Servizi</span>
+<span class="text-outline-variant font-label-badge">/</span>
+<span class="font-label-badge text-label-badge text-tertiary font-bold uppercase tracking-wider">Termografia &amp; FV</span>
+</div>
+<div class="pt-space-xs flex flex-wrap gap-1.5 items-center">
+<div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container-high text-tertiary shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="font-label-badge text-label-badge tracking-wider uppercase">UNI EN ISO 9712 LVL 2</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-2 py-1 rounded-full bg-surface-container-high text-primary font-label-badge text-label-badge tracking-wider uppercase shadow-sm">
+<span class="material-symbols-outlined text-[13px] text-primary">verified</span>
+<span>CEI EN 62446-3</span>
+</div>
+<div class="inline-flex items-center px-2 py-1 rounded bg-surface-container text-on-surface-variant font-label-badge text-label-badge">
+<span>LWIR 640×512</span>
+</div>
+</div>
+</section>
+<!-- 2. Hero Section: Technical Header & Visual HUD Preview -->
+<section class="relative z-10 space-y-space-sm">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight font-extrabold">
+        Diagnosi Impianti Fotovoltaici &amp; <span class="text-transparent bg-clip-text bg-gradient-to-r from-tertiary via-tertiary-container to-primary">Termografia Radiometrica</span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Ispezioni aeree termografiche ad altissima risoluzione per parchi solari a terra, tetti industriali e coperture commerciali. Rilevamento analitico di hot-spot, diodi in corto e stringhe disconnesse con asseverazione tecnica per garanzie e perizie legali.
+      </p>
+<!-- Thermal Sensor Viewport / Mock Flight HUD -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container-lowest shadow-xl mt-space-md">
+<div class="bg-cover bg-center w-full h-56 relative flex flex-col justify-between p-3" data-alt="Aerial top-down high-contrast thermal thermographic inspection view of large photovoltaic solar array, ironbow heat gradient palette displaying deep purple cooler panels and vivid bright orange yellow hot-spot anomaly cells on solar modules, drone telemetry HUD overlay crosshairs and centimetric RTK target reticles." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCnHUnmfcafVFVgCI033SZuEQd5z4dYnijsvnTsagKUUVdFmZSdpMeaxn5SaHmf1pPrPAks9tP6X7oOOjLB8hZqZFqtf9MKvkWL9rGkakCuO0aFGJJTRAFkbWeqwa4C3O4ANixNlO1K37WEyZP9hqNUO9uaKPq0YQelK4P7hL05AqJqn504P0iMn5LeRL0lWcbWWR2TLq8UzMZhHdDDi5Cbbj1rUgy1AD4aVlEVwZW7RtZvMC1A2qnHVg')">
+<!-- Glass Scrim Overlay -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/60 pointer-events-none"></div>
+<!-- Top HUD Indicators -->
+<div class="relative z-10 flex items-center justify-between">
+<div class="flex items-center gap-1.5 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span>
+<span class="font-label-telemetry text-label-badge text-on-surface font-semibold">REC • RADIOMETRICO</span>
+</div>
+<div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md font-label-telemetry text-label-badge text-primary">
+<span class="material-symbols-outlined text-[13px]">satellite_alt</span>
+<span>RTK FIX ±1.2cm</span>
+</div>
+</div>
+<!-- Central Crosshair / Reticle Overlay (SVG) -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<svg class="w-28 h-28 text-tertiary/70" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 100 100">
+<circle cx="50" cy="50" r="32" stroke-dasharray="3 3"></circle>
+<line x1="50" x2="50" y1="12" y2="35"></line>
+<line x1="50" x2="50" y1="65" y2="88"></line>
+<line x1="12" x2="35" y1="50" y2="50"></line>
+<line x1="65" x2="88" y1="50" y2="50"></line>
+<circle cx="50" cy="50" fill="currentColor" r="2.5"></circle>
+</svg>
+<div class="absolute translate-x-12 -translate-y-6 px-1.5 py-0.5 rounded bg-tertiary text-on-tertiary-container font-label-badge text-[10px] font-bold shadow-md">
+              ΔT +38.4°C
+            </div>
+</div>
+<!-- Bottom Telemetry Strip & Thermal Colorbar -->
+<div class="relative z-10 space-y-1.5">
+<div class="flex items-center justify-between text-on-surface font-label-badge text-[11px] px-1">
+<span class="text-on-surface-variant font-mono">T_MIN: 24.2°C</span>
+<span class="text-tertiary font-mono font-bold">SPOT: 74.8°C</span>
+<span class="text-error font-mono">T_MAX: 88.5°C</span>
+</div>
+<!-- Ironbow Gradient Bar -->
+<div class="w-full h-1.5 rounded-full bg-gradient-to-r from-[#1e0847] via-[#b31e6f] via-[#f37021] to-[#fbf78b] shadow-inner"></div>
+</div>
+</div>
+<!-- Sub-panel HUD metadata -->
+<div class="bg-surface-container-low px-3 py-2 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[16px]">thermostat</span>
+<span class="font-label-telemetry text-label-badge text-on-surface">FLIR IR-LWIR @ 30Hz</span>
+</div>
+<div class="flex items-center gap-1 font-label-telemetry text-label-badge text-on-surface-variant">
+<span>FOV 61°</span>
+<span>•</span>
+<span>ε = 0.90</span>
+</div>
+</div>
+</div>
+<!-- Quick Action CTA -->
+<div class="grid grid-cols-2 gap-space-sm pt-space-xs">
+<a class="h-12 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary-container flex items-center justify-center gap-1.5 font-headline-sm text-body-sm font-bold shadow-lg transition-all active:scale-[0.98]" href="#modulo-preventivo">
+<span class="material-symbols-outlined text-[18px]">solar_power</span>
+<span>Preventivo FV</span>
+</a>
+<a class="h-12 rounded-lg bg-surface-container-high hover:bg-surface-bright text-secondary flex items-center justify-center gap-1.5 font-headline-sm text-body-sm font-semibold transition-all active:scale-[0.98]" href="https://wa.me/393000000000?text=Richiesta%20Ispezione%20Termografica%20Fotovoltaico">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Pilota Subito</span>
+</a>
+</div>
+</section>
+<!-- 3. Key Operational Performance Indicators (Grid KPI) -->
+<section class="space-y-space-sm pt-space-xs">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Parametri Operativi</h2>
+<span class="font-label-badge text-label-badge text-primary uppercase">Standard CEI 62446</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- KPI Card 1 -->
+<div class="bg-surface-container p-3 rounded-lg flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Risoluzione LWIR</span>
+<span class="material-symbols-outlined text-primary text-[18px]">grid_4x4</span>
+</div>
+<div class="my-2">
+<div class="font-label-metric-val text-label-metric-val text-on-surface">640×512</div>
+<div class="font-label-badge text-label-badge text-primary">px @ 30Hz Uncooled</div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant leading-tight">Radiometrico completo per frame</span>
+</div>
+<!-- KPI Card 2 -->
+<div class="bg-surface-container p-3 rounded-lg flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Sensibilità Termica</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">radar</span>
+</div>
+<div class="my-2">
+<div class="font-label-metric-val text-label-metric-val text-tertiary">≤ 30 mK</div>
+<div class="font-label-badge text-label-badge text-on-surface-variant">NETD Noise Equiv.</div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant leading-tight">Distingue ΔT minime di 0.03°C</span>
+</div>
+<!-- KPI Card 3 -->
+<div class="bg-surface-container p-3 rounded-lg flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Scan Rate Max</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">speed</span>
+</div>
+<div class="my-2">
+<div class="font-label-metric-val text-label-metric-val text-on-surface">10 MWp</div>
+<div class="font-label-badge text-label-badge text-secondary">/ Giorno Operativo</div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant leading-tight">Campi a terra o tetti logistici</span>
+</div>
+<!-- KPI Card 4 -->
+<div class="bg-surface-container p-3 rounded-lg flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-label-badge text-on-surface-variant uppercase">Accuratezza RTK</span>
+<span class="material-symbols-outlined text-primary-container text-[18px]">my_location</span>
+</div>
+<div class="my-2">
+<div class="font-label-metric-val text-label-metric-val text-primary-container">±1.5 cm</div>
+<div class="font-label-badge text-label-badge text-on-surface-variant">Geotag GNSS Dual</div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant leading-tight">Identificazione univoca cella</span>
+</div>
+</div>
+</section>
+<!-- 4. Flight Payload & Hardware Setup Card (Mavic 3 Enterprise Thermal) -->
+<section class="bg-surface-container-low rounded-xl p-space-md space-y-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">flight</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[15px] font-bold text-on-surface">Aeromobile &amp; Payload Termico</h3>
+<span class="font-label-badge text-[11px] text-on-surface-variant uppercase">Asset Ufficiale Oltre Drone</span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded bg-primary-container/20 text-primary-container font-label-badge text-[11px] font-semibold uppercase">DJI M3T</span>
+</div>
+<div class="relative w-full h-40 rounded-lg overflow-hidden bg-surface-container-lowest">
+<div class="bg-cover bg-center w-full h-full flex flex-col justify-end p-2.5" data-alt="High tech professional industrial inspection drone DJI Mavic 3 Enterprise Thermal deployed on the roof of a vehicle overlooking rolling vineyard hills and solar rooftops in Oltrepò Pavese Italy, remote controller in foreground, bright daylight skies and clean technical equipment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbZ0b8-a3BZmEQQE-WsnPOHgFXKm9B6KAyRhdf6FUjP5IMxIu41XQtjtLLqS4mMDN7K3XEyFk_2MWvq6rZikJ9u15hG8GIHXXmAGTuRmrhvml1AoZt_I1-srTPDjzvAlkx8xWLa7ruMruy78zcs-Wt2EUADaCXhhuHBNppyoy0mf3hA0BvXvelEi2VAYlAJhzYwTHgxrGdoZp8oepr4anZwARC0KDxv-ybfWVCdNUJH5Wu2k7Bj22XTQ')">
+<div class="bg-surface-container-lowest/80 backdrop-blur-md rounded p-2 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-badge text-[10px] text-on-surface-variant uppercase">Doppio Sensore Sincronizzato</span>
+<span class="font-body-sm text-[12px] font-semibold text-on-surface">48MP Wide Zoom 56× + LWIR 640px</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Checklist -->
+<div class="space-y-1.5 pt-1">
+<div class="flex items-center justify-between text-[12px] py-1.5 px-2 rounded bg-surface-container">
+<span class="font-label-telemetry text-on-surface-variant">MODALITÀ PALETTE:</span>
+<span class="font-label-telemetry font-bold text-tertiary">Radiometric Ironbow / Rainbow HC</span>
+</div>
+<div class="flex items-center justify-between text-[12px] py-1.5 px-2 rounded bg-surface-container">
+<span class="font-label-telemetry text-on-surface-variant">EMISSIVITÀ TARGET (ε):</span>
+<span class="font-label-telemetry font-bold text-on-surface">0.90 (Vetro antiriflesso / Silicio)</span>
+</div>
+<div class="flex items-center justify-between text-[12px] py-1.5 px-2 rounded bg-surface-container">
+<span class="font-label-telemetry text-on-surface-variant">IRRADIANZA AL SUOLO:</span>
+<span class="font-label-telemetry font-bold text-secondary">&gt; 700 W/m² (Monitorata con piranometro)</span>
+</div>
+</div>
+</section>
+<!-- 5. Anatomy of Defects (Tipologie di Anomalie Rilevate) -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Anomalie Rilevate</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Diagnostica visivo-termica conforme CEI EN 62446-3</p>
+</div>
+<span class="material-symbols-outlined text-tertiary-container text-[26px]">troubleshoot</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Defect 1: Hot-Spot Singola Cella -->
+<div class="bg-surface-container rounded-lg p-space-md space-y-2 shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<h3 class="font-headline-sm text-[15px] font-bold text-on-surface">Hot-Spot di Singola Cella</h3>
+</div>
+<span class="font-label-badge text-label-badge text-error bg-error-container/30 px-2 py-0.5 rounded">ΔT +15°C a +55°C</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Causato da micro-fratture nel reticolo di silicio, bird drop ostinato o difetti di saldatura interna. La cella opera da carico resistivo dissipando energia e rischiando la rottura per stress termico o innesco fuoco.
+          </p>
+<div class="flex items-center gap-2 pt-1 font-label-badge text-[11px] text-on-surface-variant">
+<span class="text-tertiary">Azione O&amp;M:</span> Pulizia selettiva o sostituzione modulo in garanzia.
+          </div>
+</div>
+<!-- Defect 2: Diodi di Bypass in Cortocircuito -->
+<div class="bg-surface-container rounded-lg p-space-md space-y-2 shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<h3 class="font-headline-sm text-[15px] font-bold text-on-surface">Diodi di Bypass Guasti / Aperti</h3>
+</div>
+<span class="font-label-badge text-label-badge text-tertiary bg-tertiary-container/20 px-2 py-0.5 rounded">Perdita 33% - 100%</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Surriscaldamento marcato dell'intera scatola di giunzione o di una sotto-stringa longitudinale del modulo. Il pannello produce solo a 2/3 o viene totalmente isolato dal sistema.
+          </p>
+<div class="flex items-center gap-2 pt-1 font-label-badge text-[11px] text-on-surface-variant">
+<span class="text-primary">Azione O&amp;M:</span> Sostituzione scatola di giunzione o connettori MC4.
+          </div>
+</div>
+<!-- Defect 3: Stringhe Aperte & Disconnessioni -->
+<div class="bg-surface-container rounded-lg p-space-md space-y-2 shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<h3 class="font-headline-sm text-[15px] font-bold text-on-surface">Stringhe Aperte &amp; Disconnessioni</h3>
+</div>
+<span class="font-label-badge text-label-badge text-primary bg-primary/20 px-2 py-0.5 rounded">Modulo Freddo</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Intere serie di 18-24 moduli a temperatura uniforme più calda o più fredda rispetto al campo a causa di fusibili saltati, sezionatori aperti o roditori sui cavi solari in canalina.
+          </p>
+<div class="flex items-center gap-2 pt-1 font-label-badge text-[11px] text-on-surface-variant">
+<span class="text-secondary">Azione O&amp;M:</span> Test continuità isolamento e riarmo inverter.
+          </div>
+</div>
+<!-- Defect 4: PID & Degrado a Scacchiera -->
+<div class="bg-surface-container rounded-lg p-space-md space-y-2 shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-outline"></span>
+<h3 class="font-headline-sm text-[15px] font-bold text-on-surface">PID (Degrado da Potenziale)</h3>
+</div>
+<span class="font-label-badge text-label-badge text-on-surface-variant bg-surface-variant px-2 py-0.5 rounded">Pattern Scacchiera</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Tipica alternanza a mosaico di celle calde e fredde causata dalla dispersione di corrente parassita verso la cornice metallica a terra in impianti con elevata tensione di stringa (1000V-1500V).
+          </p>
+<div class="flex items-center gap-2 pt-1 font-label-badge text-[11px] text-on-surface-variant">
+<span class="text-on-surface">Azione O&amp;M:</span> Installazione dispositivi di recupero offset anti-PID.
+          </div>
+</div>
+</div>
+</section>
+<!-- 6. Complementary Module: Termografia Edile & Involucri Industriali -->
+<section class="bg-surface-container-high rounded-xl p-space-md space-y-space-sm shadow-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">apartment</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Involucri &amp; Coperture Industriali</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Oltre al fotovoltaico, il sensore radiometrico aereo esegue audit completi su capannoni logistici, tetti piani e complessi industriali dell'Oltrepò e Nord Italia.
+      </p>
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<div class="bg-surface-container p-2.5 rounded flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-tertiary">
+<span class="material-symbols-outlined text-[16px]">water_drop</span>
+<span class="font-label-badge text-[11px] font-bold uppercase">Infiltrazioni</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Individuazione sacche d'acqua nascoste sotto guaine bituminose per sfasamento termico notturno.</p>
+</div>
+<div class="bg-surface-container p-2.5 rounded flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[16px]">heat</span>
+<span class="font-label-badge text-[11px] font-bold uppercase">Ponti Termici</span>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant">Mappatura dispersioni energetiche su facciate ventilate, shed vetrati e portoni industriali.</p>
+</div>
+</div>
+</section>
+<!-- 7. Deliverable e Output del Rilievo (Bento Outputs) -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Cosa Riceve il Cliente</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Deliverable tecnici per Energy Manager e O&amp;M Contractor</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[26px]">folder_zip</span>
+</div>
+<div class="space-y-space-xs">
+<!-- Item 1 -->
+<div class="bg-surface-container p-3 rounded-lg flex items-start gap-3">
+<div class="w-8 h-8 rounded bg-primary-container/20 flex items-center justify-center text-primary-container shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">map</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-headline-sm text-[14px] font-bold text-on-surface">Ortomosaico Termico GeoTIFF (32-bit)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Mappa completa del sito con temperatura radiometrica assoluta incorporata in ogni singolo pixel.</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container p-3 rounded-lg flex items-start gap-3">
+<div class="w-8 h-8 rounded bg-tertiary-container/20 flex items-center justify-center text-tertiary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">pin_drop</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-headline-sm text-[14px] font-bold text-on-surface">Mappa Cadastrale Interattiva dei Difetti</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Geolocalizzazione centimetrica di ogni singolo pannello numerato (inverter, stringa, posizione modulo).</div>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-surface-container p-3 rounded-lg flex items-start gap-3">
+<div class="w-8 h-8 rounded bg-secondary-container/20 flex items-center justify-center text-secondary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-headline-sm text-[14px] font-bold text-on-surface">Report Asseverato UNI EN ISO 9712</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Documento legale formale firmato da Operatore Termografico di II° Livello, valido per reclami garanzia e assicurazioni.</div>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="bg-surface-container p-3 rounded-lg flex items-start gap-3">
+<div class="w-8 h-8 rounded bg-surface-variant flex items-center justify-center text-on-surface shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">savings</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="font-headline-sm text-[14px] font-bold text-on-surface">Audit Economico Perdita di Resa</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Stima quantificata dei kWh persi per surriscaldamento e proiezione del mancato ricavo annuo in Euro.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 8. Protocollo Operativo in 4 Step (Timeline UI) -->
+<section class="space-y-space-sm pt-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight">Protocollo Operativo in 4 Step</h2>
+<div class="space-y-space-sm relative before:absolute before:left-3 before:top-3 before:bottom-3 before:w-0.5 before:bg-surface-container-highest">
+<div class="relative pl-8 flex flex-col gap-0.5">
+<span class="absolute left-1.5 top-1 w-3.5 h-3.5 -translate-x-1/2 rounded-full bg-primary ring-4 ring-surface"></span>
+<span class="font-label-badge text-label-badge text-primary uppercase">Fase 01 • Pre-Volo</span>
+<h4 class="font-headline-sm text-[14px] font-bold text-on-surface">Verifica Meteo &amp; Irraggiamento Solare</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Misurazione dell'irradianza diretta (&gt;700 W/m² con piranometro tarato) e assenza di copertura nuvolosa mobile.</p>
+</div>
+<div class="relative pl-8 flex flex-col gap-0.5">
+<span class="absolute left-1.5 top-1 w-3.5 h-3.5 -translate-x-1/2 rounded-full bg-tertiary ring-4 ring-surface"></span>
+<span class="font-label-badge text-label-badge text-tertiary uppercase">Fase 02 • Esecuzione</span>
+<h4 class="font-headline-sm text-[14px] font-bold text-on-surface">Scansione Zenitale RTK Calibrata</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rotta di volo automatizzata su D-Flight con angolo camera inclinato tra 70° e 85° per eliminare riflessi solari parassiti.</p>
+</div>
+<div class="relative pl-8 flex flex-col gap-0.5">
+<span class="absolute left-1.5 top-1 w-3.5 h-3.5 -translate-x-1/2 rounded-full bg-secondary ring-4 ring-surface"></span>
+<span class="font-label-badge text-label-badge text-secondary uppercase">Fase 03 • Processing</span>
+<h4 class="font-headline-sm text-[14px] font-bold text-on-surface">Fotogrammetria &amp; AI Defect Detection</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Composizione dell'ortomosaico radiativo e classificazione computerizzata degli scarti termici ΔT modulo per modulo.</p>
+</div>
+<div class="relative pl-8 flex flex-col gap-0.5">
+<span class="absolute left-1.5 top-1 w-3.5 h-3.5 -translate-x-1/2 rounded-full bg-primary-container ring-4 ring-surface"></span>
+<span class="font-label-badge text-label-badge text-primary-container uppercase">Fase 04 • Consegna</span>
+<h4 class="font-headline-sm text-[14px] font-bold text-on-surface">Report Asseverato &amp; File Vettoriali</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Consegna entro 48-72 ore di cartelle Shapefile, GeoJSON per portali O&amp;M e fascicolo tecnico firmato dal tecnico certificato.</p>
+</div>
+</div>
+</section>
+<!-- 9. Real Case Study (Basso Pavese / Lomellina) -->
+<section class="bg-surface-container rounded-xl p-space-md space-y-space-sm shadow-lg overflow-hidden relative">
+<div class="flex items-center justify-between">
+<span class="px-2 py-0.5 rounded bg-tertiary-container/20 text-tertiary font-label-badge text-label-badge uppercase font-bold">Caso Studio Reale</span>
+<span class="font-label-badge text-label-badge text-on-surface-variant">Oltrepò / Lomellina</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-[16px] font-bold text-on-surface">Parco Solare Industriale a Terra 4.8 MWp</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+          Audit completo di oltre 12.000 pannelli monocristallini eseguito in un'unica giornata operativa con drone termico radiometrico RTK.
+        </p>
+</div>
+<!-- Case study metrics strip -->
+<div class="grid grid-cols-3 gap-2 py-2">
+<div class="bg-surface-container-high p-2 rounded text-center">
+<span class="font-label-metric-val text-label-metric-val text-error">14</span>
+<span class="block font-body-sm text-[10px] text-on-surface-variant uppercase mt-0.5">Hot-Spot Critici (&gt;55°C)</span>
+</div>
+<div class="bg-surface-container-high p-2 rounded text-center">
+<span class="font-label-metric-val text-label-metric-val text-tertiary">3</span>
+<span class="block font-body-sm text-[10px] text-on-surface-variant uppercase mt-0.5">Stringhe Interrotte</span>
+</div>
+<div class="bg-surface-container-high p-2 rounded text-center">
+<span class="font-label-metric-val text-label-metric-val text-secondary">+6.8%</span>
+<span class="block font-body-sm text-[10px] text-on-surface-variant uppercase mt-0.5">Resa Annua Recuperata</span>
+</div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-lowest text-on-surface flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">trending_up</span>
+<span class="font-headline-sm text-[13px] font-semibold">+14.200 € / Anno di ricavo recuperato</span>
+</div>
+<span class="font-label-badge text-[10px] text-secondary font-mono">ROI &lt; 2 MESI</span>
+</div>
+</section>
+<!-- 10. Modulo di Richiesta Preventivo / Ispezione FV -->
+<section class="bg-surface-container-low rounded-xl p-space-md space-y-space-md shadow-xl relative scroll-mt-20" id="modulo-preventivo">
+<div class="space-y-1">
+<div class="flex items-center gap-2 text-tertiary">
+<span class="material-symbols-outlined text-[20px]">flight_takeoff</span>
+<span class="font-label-badge text-label-badge uppercase font-bold tracking-wider">Richiesta Ispezione Termografica</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Preventivo Impianto FV</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Risposta entro 4 ore con fattibilità di volo e quotazione per il tuo impianto.</p>
+</div>
+<form class="space-y-space-sm" onsubmit="event.preventDefault(); alert('Grazie! La richiesta per l\'ispezione termografica è stata inviata. Ti ricontatteremo a breve.');">
+<!-- Field: Nome / Azienda -->
+<div class="space-y-1">
+<label class="block font-label-badge text-label-badge text-on-surface-variant uppercase" for="client-name">Nome / Azienda / Gestore O&amp;M</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container text-on-surface placeholder:text-outline-variant font-body-md text-body-sm outline-none focus:bg-surface-container-high transition-colors" id="client-name" placeholder="Es. Mario Rossi / Solare Green Srl" required="" type="text"/>
+</div>
+<!-- Field: Tipologia Impianto -->
+<div class="space-y-1">
+<label class="block font-label-badge text-label-badge text-on-surface-variant uppercase" for="plant-type">Tipologia Impianto</label>
+<select class="w-full h-11 px-3 rounded bg-surface-container text-on-surface font-body-md text-body-sm outline-none focus:bg-surface-container-high transition-colors" id="plant-type">
+<option value="tetto-industriale">Tetto Industriale / Capannone Commerciale</option>
+<option value="campo-terra">Parco Solare a Terra (Utility Scale)</option>
+<option value="agrivoltaico">Impianto Agrivoltaico / Vigneto</option>
+<option value="residenziale">Copertura Residenziale / Condominio</option>
+<option value="edile-involucro">Termografia Involucro Edile / Guaine Piane</option>
+</select>
+</div>
+<!-- Field Grid: Potenza & Comune -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="space-y-1">
+<label class="block font-label-badge text-label-badge text-on-surface-variant uppercase" for="plant-power">Potenza (kWp / MWp)</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container text-on-surface placeholder:text-outline-variant font-body-md text-body-sm outline-none focus:bg-surface-container-high transition-colors" id="plant-power" placeholder="Es. 450 kWp" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="block font-label-badge text-label-badge text-on-surface-variant uppercase" for="plant-loc">Comune / Provincia</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container text-on-surface placeholder:text-outline-variant font-body-md text-body-sm outline-none focus:bg-surface-container-high transition-colors" id="plant-loc" placeholder="Es. Voghera (PV)" required="" type="text"/>
+</div>
+</div>
+<!-- Field: Telefono / WhatsApp -->
+<div class="space-y-1">
+<label class="block font-label-badge text-label-badge text-on-surface-variant uppercase" for="client-phone">Telefono o WhatsApp</label>
+<input class="w-full h-11 px-3 rounded bg-surface-container text-on-surface placeholder:text-outline-variant font-body-md text-body-sm outline-none focus:bg-surface-container-high transition-colors" id="client-phone" placeholder="+39 3XX XXXXXXX" required="" type="tel"/>
+</div>
+<!-- Primary Submit Button -->
+<button class="w-full h-12 rounded-lg bg-tertiary-container hover:bg-tertiary text-on-tertiary-container font-headline-sm text-body-md font-bold tracking-tight shadow-lg flex items-center justify-center gap-2 transition-all active:scale-[0.99] mt-2" type="submit">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Richiedi Ispezione FV &amp; Preventivo</span>
+</button>
+</form>
+<!-- Technical Assurance Disclaimer -->
+<div class="pt-2 flex items-center justify-center gap-2 text-on-surface-variant font-label-badge text-[11px] text-center">
+<span class="material-symbols-outlined text-secondary text-[16px]">lock</span>
+<span>Operazioni conformi Regolamento EASA / ENAC - STS-01 / SPECIFIC</span>
+</div>
+</section>
+<!-- Bottom Operator Info Footer / Quick Link -->
+<section class="p-space-md rounded-lg bg-surface-container text-center space-y-2 mb-2">
+<div class="flex items-center justify-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-headline-sm text-[13px] font-bold">Piloti Professionisti Certificati Oltre Drone</span>
+</div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+        Base operativa Oltrepò Pavese (PV) • Operativi in tutta Lombardia, Piemonte, Emilia-Romagna e Liguria.
+      </p>
+<div class="flex items-center justify-center gap-3 pt-1">
+<a class="inline-flex items-center gap-1 font-label-badge text-label-badge text-secondary hover:underline" href="https://wa.me/393000000000?text=Buongiorno%2C%20vorrei%20informazioni%20sulle%20ispezioni%20termografiche%20FV">
+<span class="material-symbols-outlined text-[14px]">call</span>
+<span>WhatsApp Diretto</span>
+</a>
+<span class="text-outline-variant">•</span>
+<a class="inline-flex items-center gap-1 font-label-badge text-label-badge text-primary-container hover:underline" href="#">
+<span class="material-symbols-outlined text-[14px]">download</span>
+<span>Esempio Report PDF</span>
+</a>
+</div>
+</section>
+</div>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex-1 flex flex-col items-center justify-center h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="oltre-drone---rilievi-aerei-di-precisione-&amp;-termografia" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Home</span></a><a class="flex-1 flex flex-col items-center justify-center h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="viticoltura-4.0-&amp;-monitoraggio-vigneti" href="#"><span class="material-symbols-outlined text-[22px]">agriculture</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Viticoltura</span></a><a class="flex-1 flex flex-col items-center justify-center h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="servizi" href="#servizi-grid"><span class="material-symbols-outlined text-[22px]">layers</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Servizi</span></a><a class="flex-1 flex flex-col items-center justify-center h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="casi-studio" href="#showcase"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Casi Studio</span></a><a class="flex-1 flex flex-col items-center justify-center h-11 text-secondary hover:text-secondary-fixed transition-colors" data-path="contatto-whatsapp" href="https://wa.me/393330000000"><span class="material-symbols-outlined text-[22px]">chat</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">WhatsApp</span></a></div></nav></body></html>

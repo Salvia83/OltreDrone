@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="it"><head><meta name="robots" content="noindex, nofollow"/>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab_detail" name="shell-type"/><title>Viticoltura 4.0 &amp; Monitoraggio Vigneti | Oltre Drone</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#7bd0ff", "secondary-container": "#00a572", "on-secondary": "#003824", "on-tertiary": "#552100", "on-primary-fixed-variant": "#004c69", "primary-container": "#38bdf8", "inverse-primary": "#00668a", "on-error": "#690005", "outline-variant": "#3e484f", "inverse-on-surface": "#2c303a", "on-tertiary-fixed-variant": "#783200", "on-primary": "#00354a", "inverse-surface": "#dfe2ef", "tertiary-fixed-dim": "#ffb690", "surface-container-lowest": "#0a0e17", "secondary-fixed-dim": "#4edea3", "surface-dim": "#0f131c", "on-tertiary-container": "#743000", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#341100", "outline": "#87929a", "on-secondary-container": "#00311f", "primary-fixed": "#c4e7ff", "error": "#ffb4ab", "on-surface-variant": "#bdc8d1", "tertiary-container": "#ff975d", "surface-container": "#1c1f29", "tertiary-fixed": "#ffdbca", "tertiary": "#ffbf9e", "surface-container-highest": "#31353f", "background": "#0f131c", "surface": "#0f131c", "surface-container-low": "#181b25", "on-secondary-fixed-variant": "#005236", "error-container": "#93000a", "on-surface": "#dfe2ef", "surface-container-high": "#262a34", "surface-tint": "#7bd0ff", "on-primary-container": "#004965", "on-background": "#dfe2ef", "on-primary-fixed": "#001e2c", "surface-bright": "#353943", "secondary-fixed": "#6ffbbe", "primary": "#8ed5ff", "on-secondary-fixed": "#002113", "secondary": "#4edea3", "surface-variant": "#31353f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "margin": "3rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "margin-mobile": "1.25rem", "space-md": "1rem" }, fontFamily: { "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-metric-val": ["JetBrains Mono"], "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-telemetry": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-xl-mobile": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-md": ["1.75rem", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }], "label-metric-val": ["1.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-xl": ["3.5rem", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-sm": ["1.25rem", { lineHeight: "1.4", letterSpacing: "0", fontWeight: "600" }], "body-sm": ["0.875rem", { lineHeight: "1.5", letterSpacing: "0", fontWeight: "400" }], "label-badge": ["0.75rem", { lineHeight: "1.2", letterSpacing: "0.08em", fontWeight: "600" }], "headline-lg": ["2.5rem", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg-mobile": ["1.75rem", { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "700" }], "label-telemetry": ["0.875rem", { lineHeight: "1.4", letterSpacing: "0.05em", fontWeight: "500" }], "body-lg": ["1.125rem", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }], "body-md": ["1rem", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }] } } } };</script></head><body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0"><a aria-label="Torna alla Home" class="w-11 h-11 -ml-1.5 flex items-center justify-center text-on-surface hover:text-primary-container transition-colors rounded" data-path="oltre-drone---rilievi-aerei-di-precisione-&amp;-termografia" href="#"><span class="material-symbols-outlined text-[24px]">arrow_back</span></a><div class="flex flex-col justify-center min-w-0"><div class="flex items-center gap-1.5"><span class="font-label-badge text-[11px] text-on-surface-variant uppercase tracking-wider truncate">Home</span><span class="text-outline-variant text-[12px]">/</span><span class="font-label-badge text-[11px] text-primary-container font-semibold uppercase tracking-wider truncate">Viticoltura 4.0</span></div><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span><span class="font-headline-sm text-[13px] tracking-tight text-on-surface uppercase truncate font-bold">NDVI &amp; Vigore</span></div></div></div><div class="flex items-center gap-space-xs"><a class="h-11 px-3.5 rounded bg-primary-container hover:bg-primary text-on-primary-container flex items-center justify-center font-headline-sm text-body-sm font-semibold tracking-tight transition-colors" data-path="richiesta-preventivo" href="preventivo.html"><span class="material-symbols-outlined text-[18px] mr-1">flight_takeoff</span><span>Preventivo</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-background pt-16 pb-24 relative"><div class="flex flex-col w-full pb-8">
+<!-- SECTION: Telemetry HUD Header / Hero Intro -->
+<div class="px-gutter-mobile py-space-md flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container/20 text-secondary font-label-badge text-[10px] tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+        Agricoltura 4.0
+      </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-badge text-[10px] tracking-wider uppercase">
+<span class="material-symbols-outlined text-[12px] text-primary-container">location_on</span>
+        Oltrepò Pavese
+      </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-primary-container font-label-badge text-[10px] tracking-wider uppercase">
+<span class="material-symbols-outlined text-[12px]">radar</span>
+        Multispettrale &amp; LWIR
+      </span>
+</div>
+<div class="flex flex-col gap-1">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">
+        Viticoltura 4.0 &amp; Monitoraggio Vigneti
+      </h1>
+<p class="font-body-md text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+        Dall'acquisizione fotogrammetrica centimetrica alla vendemmia selettiva: mappatura multispettrale del vigore, diagnosi precoce dello stress idrico e generazione di mappe prescrittive VRA compatibili ISOBUS.
+      </p>
+</div>
+<!-- Quick Metric Strips (Aerospace Bento Style) -->
+<div class="grid grid-cols-2 gap-space-xs mt-1">
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-badge text-[10px] uppercase tracking-wider">Risoluzione GSD</span>
+<span class="material-symbols-outlined text-primary-container text-[16px]">straighten</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-label-metric-val text-label-metric-val text-on-surface">1.2</span>
+<span class="font-label-telemetry text-body-sm text-primary-container">cm/px</span>
+</div>
+<span class="font-label-badge text-[10px] text-outline mt-0.5">Sensore 4-Band M3E</span>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-badge text-[10px] uppercase tracking-wider">Accuratezza RTK</span>
+<span class="material-symbols-outlined text-secondary text-[16px]">gps_fixed</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-label-metric-val text-label-metric-val text-on-surface">±1.5</span>
+<span class="font-label-telemetry text-body-sm text-secondary">cm</span>
+</div>
+<span class="font-label-badge text-[10px] text-outline mt-0.5">Rete NTRIP Oltrepò</span>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-badge text-[10px] uppercase tracking-wider">Resa Operativa</span>
+<span class="material-symbols-outlined text-tertiary-container text-[16px]">speed</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-label-metric-val text-label-metric-val text-on-surface">60+</span>
+<span class="font-label-telemetry text-body-sm text-tertiary-container">ha/gg</span>
+</div>
+<span class="font-label-badge text-[10px] text-outline mt-0.5">Volo autonomo terrain</span>
+</div>
+<div class="p-3 rounded-xl bg-surface-container-low flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-badge text-[10px] uppercase tracking-wider">Output GIS</span>
+<span class="material-symbols-outlined text-primary text-[16px]">folder_zip</span>
+</div>
+<div class="mt-2 flex items-baseline gap-1">
+<span class="font-headline-sm text-body-md text-on-surface font-bold tracking-tight">SHP / TIF</span>
+</div>
+<span class="font-label-badge text-[10px] text-outline mt-0.5">QGIS &amp; John Deere VRA</span>
+</div>
+</div>
+</div>
+<!-- SECTION: Field Imagery & Live Telemetry Glass Overlay -->
+<div class="px-gutter-mobile my-space-xs">
+<div class="relative w-full rounded-2xl overflow-hidden bg-surface-container shadow-xl">
+<div class="w-full h-80 relative">
+<img alt="Drone Mavic 3 Enterprise posizionato sul retrovisore panoramico con radiocomando RC Pro attivo con vista delle colline e vigneti dell'Oltrepò Pavese" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXIeFNFk1tHfZr8u5cCIq8LTbcNvby0_FN7lVjyjc6TBze3O_0uNR2k8_c369bgQFXThqtQrosHYRBMCjCKxUBr4So1RFsN5fTpKxfkNXGPt167t-u1LtbKS5sETUIPY9bKFOka-NOdki6dY9xy1LYUEV-UmObtsJM1m2XQQmlfdDFmbol5P4f3q7AE1LFG20lK4cf6G4RunnzHKBI0PmuchO_pCg9vaprWDTVkRPCpoQdo6iHiq51ddzN6iPIRH5yy6M"/>
+<!-- Avionics Coordinate Overlay Scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-surface-container-lowest/30 to-transparent"></div>
+<!-- Cockpit Badge Pinned Top Right -->
+<div class="absolute top-3 right-3 px-2.5 py-1.5 rounded-lg bg-surface-container-lowest/80 backdrop-blur-md flex items-center gap-1.5 shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-badge text-[10px] text-on-surface tracking-wider">UAV STATUS: READY</span>
+</div>
+<!-- Telemetry Data Overlay Pinned Bottom -->
+<div class="absolute bottom-3 left-3 right-3 p-3 rounded-xl bg-surface-container-lowest/85 backdrop-blur-md flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-[18px]">flight</span>
+<span class="font-headline-sm text-body-sm text-on-surface font-bold">DJI M3E Precision Payload</span>
+</div>
+<span class="font-label-badge text-[11px] text-secondary font-semibold">RTK FIXED</span>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1 border-t-0 bg-surface-container-high/40 p-2 rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-badge text-[9px] text-on-surface-variant uppercase">Sensore</span>
+<span class="font-label-telemetry text-[11px] text-on-surface">RGB + MS + LWIR</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-[9px] text-on-surface-variant uppercase">Coordinate</span>
+<span class="font-label-telemetry text-[11px] text-on-surface">45.02° N, 9.25° E</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-badge text-[9px] text-on-surface-variant uppercase">Quota Relativa</span>
+<span class="font-label-telemetry text-[11px] text-on-surface">65m AGL (Follow)</span>
+</div>
+</div>
+<p class="font-body-sm text-[11px] text-on-surface-variant leading-snug">
+            Rilievi ad alta quota nelle colline vitate pavesi con rispetto rigoroso degli inviluppi EASA STS/Specific e calibrazione radiometrica istantanea.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION: Interactive Index / Palette Explorer -->
+<div class="px-gutter-mobile mt-space-md">
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-space-sm shadow-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">format_clear</span>
+<h2 class="font-headline-sm text-body-lg text-on-surface font-bold">Indici Spettrali Monitorati</h2>
+</div>
+<span class="font-label-badge text-[10px] text-primary-container uppercase tracking-wider">Multi-Band</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Analisi combinata delle lunghezze d'onda nel visibile (RGB), RedEdge, NIR (Vicino Infrarosso) e LWIR (Termico a onda lunga):
+      </p>
+<!-- Spectral Strips -->
+<div class="flex flex-col gap-2.5 mt-1">
+<!-- NDVI Strip -->
+<div class="p-3 rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+              NDVI (Normalized Veg. Index)
+            </span>
+<span class="font-label-telemetry text-[11px] text-secondary">0.18 → 0.89</span>
+</div>
+<!-- Color Bar Preview -->
+<div class="w-full h-2 rounded-full bg-gradient-to-r from-red-500 via-amber-400 via-yellow-200 to-emerald-400"></div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+            Stima del vigore generale, densità della parete fogliare e clorofilla attiva. Essenziale per la vendemmia selettiva delle uve Cru.
+          </p>
+</div>
+<!-- NDRE Strip -->
+<div class="p-3 rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+              NDRE (Normalized Red Edge)
+            </span>
+<span class="font-label-telemetry text-[11px] text-primary-container">Sensibilità Alta</span>
+</div>
+<div class="w-full h-2 rounded-full bg-gradient-to-r from-stone-600 via-teal-600 to-cyan-400"></div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+            Penetra strati chioma più densi durante l'invaiatura senza andare in saturazione precoce come l'NDVI tradizionale.
+          </p>
+</div>
+<!-- CWSI / Termico Strip -->
+<div class="p-3 rounded-xl bg-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-body-sm text-on-surface font-semibold flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+              CWSI &amp; Termografia Fogliare
+            </span>
+<span class="font-label-telemetry text-[11px] text-tertiary-container">ΔT: 0.1°C</span>
+</div>
+<div class="w-full h-2 rounded-full bg-gradient-to-r from-purple-800 via-red-500 via-amber-400 to-yellow-100"></div>
+<p class="font-body-sm text-[12px] text-on-surface-variant">
+            Mappa radiometrica dello stress idrico. Rileva la chiusura stomatica prima che la foglia mostri appassimento visibile.
+          </p>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION: Key Applications Bento Layout -->
+<div class="px-gutter-mobile mt-space-lg flex flex-col gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-badge text-[10px] text-secondary uppercase tracking-wider font-semibold">Soluzioni Operative</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight mt-0.5">Cosa Riceve la Tua Cantina</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Dati oggettivi e azionabili per agronomi, enologi e titolari d'azienda.</p>
+</div>
+<!-- App 1: Zonazione Vigore -->
+<div class="p- space-md p-4 rounded-2xl bg-surface-container-low flex flex-col gap-3">
+<div class="w-full h-44 rounded-xl overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Visualizzazione aerea ortofoto a falsi colori NDVI di vigneti su colline terrazzate in Oltrepò Pavese con chiare gradazioni dal rosso all'arancio fino al verde brillante delle parcelle rigogliose, linee di contouring e orientamento filari evidenziati, stile scientifico da stazione fotogrammetrica professionale con grafica pulita e moderna" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1a_lUGM9Fvv1kX_sWWUq7H5_pCjikK4G1p4eysYb48SIMSiEqYdJQd-gLOH7KhcDqMDuWb4ByzU6n-JAUt3rTXKm7WEqYfRwgfxv1n-IuYlajZW64u5kd2y6ohUfOMpWSl2ltFZASgMZZJz8zWqxY84lGdz2qbL8pasHXH1pZFUzh7mOMw0RmpwNcZBxDwSx2nR8bu6fIAHqmc833-kDBChxJoDY-MR2QmFAPuT7pch9XkWMeVcwnCQ"/>
+<div class="absolute top-2.5 left-2.5 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md">
+<span class="font-label-badge text-[10px] text-secondary font-bold">VIGORE VEGETATIVO</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-body-lg text-on-surface font-bold">Zonazione del Vigore &amp; Vendemmia Selettiva</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Definizione di micro-terroir e parcelle omogenee. Permette di pianificare la raccolta scalare differenziando i filari ad alto potenziale enologico per le riserve da quelli destinati a vini di pronta beva.
+        </p>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-badge text-primary-container">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Riduzione scarti al banco selezione
+        </span>
+</div>
+</div>
+<!-- App 2: Stress Idrico CWSI -->
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-3">
+<div class="w-full h-44 rounded-xl overflow-hidden relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Mappa termica termografica radiometrica a infrarossi di un vigneto con palette ironbow che mostra il gradiente di temperatura fogliare tra filari irrigati freschi in blu e zone in stress termico in giallo e fucsia vivo, dettaglio scientifico ad alta precisione scattato da drone con scala termometrica laterale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxi2K0sFhbpoeYUK-SDFPdDU4O-a_CrdaZhQVQr1CZ5GaKqUw-VUuqx6EJV3tl6_xKcj62qcZJg5x6ZQWMtMqlS8B2M5R0ImkDa97GtC3pqhnUmOSuHBntwCLCxzMpsw3k6DixVkCcgyeoRF4NIGLfqgFl5_qzTDw_kjdHDmPhpqNZFBSPXYUdNjktaTFKV9lkwmqXeBgeJOsw4u3KwBivwAGxwpJfZfq89a4nbYXoQ7rORdzQa0B5Cg"/>
+<div class="absolute top-2.5 left-2.5 px-2 py-1 rounded bg-surface-container-lowest/80 backdrop-blur-md">
+<span class="font-label-badge text-[10px] text-tertiary-container font-bold">IRRIGATION MANAGEMENT</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-body-lg text-on-surface font-bold">Diagnosi Precoce dello Stress Idrico (CWSI)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Grazie al sensore termico radiometrico calibrato con stazioni meteo locali, misuriamo l'innalzamento termico della foglia causato dalla chiusura stomatica. Ottimizza l'irrigazione a goccia con risparmio idrico stimato fino al 35%.
+        </p>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-badge text-secondary">
+<span class="material-symbols-outlined text-[14px]">water_drop</span> -35% Consumo Idrico Mirato
+        </span>
+</div>
+</div>
+<!-- App 3 & 4 Mini Grid -->
+<div class="grid grid-cols-1 gap-space-sm">
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-2">
+<div class="w-10 h-10 rounded-xl bg-primary-container/20 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">terrain</span>
+</div>
+<h3 class="font-headline-sm text-body-md text-on-surface font-bold mt-1">DSM / DTM: Pendenze, Ristagni ed Erosione</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Modelli digitali 3D centimetrici del terreno per analizzare i canali di scorrimento delle acque piovane, individuare aree soggette a dilavamento radicale ed evitare asfissie da ristagno tipiche dell'Oltrepò.
+        </p>
+</div>
+<div class="p-4 rounded-2xl bg-surface-container-low flex flex-col gap-2">
+<div class="w-10 h-10 rounded-xl bg-secondary-container/20 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">precision_manufacturing</span>
+</div>
+<h3 class="font-headline-sm text-body-md text-on-surface font-bold mt-1">Mappe Prescrittive VRA (Rateo Variabile)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Esportazione diretta in formato Shapefile / ISO-XML compatibile con spandiconcime e botti da diserbo ISOBUS. Distribuzione mirata di nutrienti solo dove il vigore è deficitario.
+        </p>
+</div>
+</div>
+</div>
+<!-- SECTION: Four-Step Operational Protocol -->
+<div class="px-gutter-mobile mt-space-lg">
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-badge text-[10px] text-primary-container uppercase tracking-wider font-semibold">Workflow Certificato</span>
+<h2 class="font-headline-sm text-body-lg text-on-surface font-bold">Il Nostro Metodo in 4 Fasi</h2>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[24px]">timeline</span>
+</div>
+<div class="flex flex-col gap-3 mt-1">
+<!-- Step 1 -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary font-label-badge flex items-center justify-center shrink-0">
+            01
+          </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm text-on-surface font-bold">Pianificazione di Precisione &amp; Nulla Osta</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+              Tracciamento del perimetro catastale su D-Flight e predisposizione del piano di volo 3D con aderenza al terreno (Terrain Follow).
+            </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-primary font-label-badge flex items-center justify-center shrink-0">
+            02
+          </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm text-on-surface font-bold">Volo &amp; Calibrazione Radiometrica</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+              Rilievo sul campo con aggancio RTK centimetrico e lettura di pannello di riflettanza calibrato a terra pre e post decollo.
+            </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-secondary font-label-badge flex items-center justify-center shrink-0">
+            03
+          </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm text-on-surface font-bold">Elaborazione Fotogrammetrica &amp; Indici</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+              Processamento con workstation dedicata: allineamento ortomosaici multispettrali, calcolo NDVI/NDRE, curve di livello DSM.
+            </p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="flex gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container font-label-badge flex items-center justify-center shrink-0 font-bold">
+            04
+          </div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm text-on-surface font-bold">Consegna Report Agronomico &amp; VRA</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant leading-relaxed">
+              Invio dossier interpretativo chiaro per l'agronomo (PDF), geodati TIF per GIS e shapefile VRA pronti per il trattore.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION: Real Case Study Oltrepò Pavese -->
+<div class="px-gutter-mobile mt-space-lg">
+<div class="p-space-md rounded-2xl bg-surface-container flex flex-col gap-3 shadow-md relative overflow-hidden">
+<!-- Decorative background accent bar -->
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-secondary via-primary-container to-tertiary-container"></div>
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-[10px] text-secondary uppercase tracking-widest font-bold">Caso Studio Reale</span>
+<span class="font-label-telemetry text-[11px] text-on-surface-variant">VENDEMMIA 2024</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-body-lg text-on-surface font-bold">
+          Tenuta Vitivinicola • Canneto Pavese / Montù Beccaria
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
+          Monitoraggio integrato su 18 ettari coltivati a Pinot Nero e Croatina. Individuazione precoce di un blocco di traspirazione fogliare nella parcella collinare sommitale, non visibile a terra.
+        </p>
+</div>
+<div class="grid grid-cols-2 gap-2 mt-1">
+<div class="p-2.5 rounded-xl bg-surface-container-high/60 flex flex-col">
+<span class="font-label-badge text-[10px] text-outline uppercase">Intervento</span>
+<span class="font-headline-sm text-body-sm text-on-surface font-bold mt-0.5">Irrigazione &amp; Fogliari</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Soccorso localizzato in 48h</span>
+</div>
+<div class="p-2.5 rounded-xl bg-surface-container-high/60 flex flex-col">
+<span class="font-label-badge text-[10px] text-outline uppercase">Risultato Enologico</span>
+<span class="font-label-metric-val text-headline-sm text-secondary font-bold mt-0.5">+22% Resa Cru</span>
+<span class="font-body-sm text-[11px] text-on-surface-variant">Gradazione zuccherina bilanciata</span>
+</div>
+</div>
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">format_quote</span>
+<p class="font-body-sm text-[12px] text-on-surface italic">
+          "Il rilievo multispettrale ha fatto la differenza tra una vendemmia compromessa dall'arsura e una riserva d'eccellenza."
+        </p>
+</div>
+</div>
+</div>
+<!-- SECTION: Interactive Quotation & Vineyard Survey Request Form -->
+<div class="px-gutter-mobile mt-space-lg" id="richiesta-rilievo">
+<div class="p-space-md rounded-2xl bg-surface-container-low flex flex-col gap-space-sm shadow-lg">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5 text-primary-container">
+<span class="material-symbols-outlined text-[18px]">calculate</span>
+<span class="font-label-badge text-[10px] uppercase tracking-wider font-semibold">Configura Servizio</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-bold">Richiedi Studio di Fattibilità Gratuito</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Ricevi una valutazione preliminare con analisi delle finestre di volo per il tuo vigneto in Oltrepò Pavese, Colli Piacentini o Monferrato.
+        </p>
+</div>
+<form class="flex flex-col gap-3 mt-1" id="vineyardForm" onsubmit="event.preventDefault(); submitVineyardInquiry();">
+<!-- Input Azienda -->
+<div class="flex flex-col gap-1">
+<label class="font-label-badge text-[11px] text-on-surface-variant uppercase" for="companyName">Cantina / Azienda Agricola *</label>
+<div class="relative">
+<input class="w-full px-3.5 py-3 rounded-xl bg-surface-container text-on-surface placeholder:text-outline font-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container text-body-sm" id="companyName" placeholder="Es. Tenuta Poggi &amp; Vigneti" required="" type="text"/>
+</div>
+</div>
+<!-- Input Comune / Zona -->
+<div class="flex flex-col gap-1">
+<label class="font-label-badge text-[11px] text-on-surface-variant uppercase" for="vineyardZone">Comune o Zona Vigneto *</label>
+<div class="relative">
+<input class="w-full px-3.5 py-3 rounded-xl bg-surface-container text-on-surface placeholder:text-outline font-body-sm focus:outline-none focus:ring-2 focus:ring-primary-container text-body-sm" id="vineyardZone" placeholder="Es. Broni, Casteggio, Santa Maria della Versa..." required="" type="text"/>
+</div>
+</div>
+<!-- Input Ettari & Telefono in 2 Colonne -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="flex flex-col gap-1">
+<label class="font-label-badge text-[11px] text-on-surface-variant uppercase" for="hectares">Superficie (Ha) *</label>
+<input class="w-full px-3.5 py-3 rounded-xl bg-surface-container text-on-surface placeholder:text-outline font-label-telemetry focus:outline-none focus:ring-2 focus:ring-primary-container text-body-sm" id="hectares" max="500" min="1" placeholder="Es. 12" required="" step="0.5" type="number"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-badge text-[11px] text-on-surface-variant uppercase" for="contactPhone">Telefono / WhatsApp *</label>
+<input class="w-full px-3.5 py-3 rounded-xl bg-surface-container text-on-surface placeholder:text-outline font-label-telemetry focus:outline-none focus:ring-2 focus:ring-primary-container text-body-sm" id="contactPhone" placeholder="340 0000000" required="" type="tel"/>
+</div>
+</div>
+<!-- Obiettivo Prioritario (Radio Chips) -->
+<div class="flex flex-col gap-1.5 mt-1">
+<span class="font-label-badge text-[11px] text-on-surface-variant uppercase">Obiettivo Principale</span>
+<div class="grid grid-cols-2 gap-2" id="goalSelector">
+<button class="goal-chip active p-2.5 rounded-xl bg-primary-container text-on-primary-container font-headline-sm text-[12px] font-semibold text-left transition-colors flex items-center justify-between" onclick="selectGoal(this, 'Zonazione Vigore &amp; Vendemmia')" type="button">
+<span>Zonazione Vigore</span>
+<span class="material-symbols-outlined text-[16px]">check</span>
+</button>
+<button class="goal-chip p-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface font-headline-sm text-[12px] font-semibold text-left transition-colors flex items-center justify-between" onclick="selectGoal(this, 'Stress Idrico CWSI')" type="button">
+<span>Stress Idrico (CWSI)</span>
+<span class="material-symbols-outlined text-[16px] opacity-0">check</span>
+</button>
+<button class="goal-chip p-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface font-headline-sm text-[12px] font-semibold text-left transition-colors flex items-center justify-between" onclick="selectGoal(this, 'Pendenze e Ristagni DSM')" type="button">
+<span>Curve Livello / DSM</span>
+<span class="material-symbols-outlined text-[16px] opacity-0">check</span>
+</button>
+<button class="goal-chip p-2.5 rounded-xl bg-surface-container text-on-surface-variant hover:text-on-surface font-headline-sm text-[12px] font-semibold text-left transition-colors flex items-center justify-between" onclick="selectGoal(this, 'Mappe Prescrizione VRA')" type="button">
+<span>Prescrizioni VRA</span>
+<span class="material-symbols-outlined text-[16px] opacity-0">check</span>
+</button>
+</div>
+</div>
+<!-- Submit Button -->
+<button class="mt-2 w-full py-3.5 px-4 rounded-xl bg-primary-container hover:bg-primary text-on-primary-container font-headline-sm text-body-md font-bold tracking-tight shadow-md flex items-center justify-center gap-2 transition-all active:scale-[0.99]" type="submit">
+<span class="material-symbols-outlined text-[20px]">flight_takeoff</span>
+<span>Richiedi Studio di Fattibilità Gratuito</span>
+</button>
+<!-- Dynamic Success Toast Placeholder -->
+<div class="hidden p-3 rounded-xl bg-secondary-container/20 text-secondary text-[13px] font-body-sm flex items-center gap-2" id="formSuccessToast">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Richiesta inviata! Ti contatteremo entro 4 ore per la pianificazione cartografica.</span>
+</div>
+</form>
+<!-- Instant Direct Contact Divider -->
+<div class="flex items-center gap-2 pt-2 text-outline-variant">
+<div class="h-px bg-surface-container-high flex-1"></div>
+<span class="font-label-badge text-[10px] uppercase text-outline">Oppure Contatto Diretto Immediato</span>
+<div class="h-px bg-surface-container-high flex-1"></div>
+</div>
+<!-- Quick WhatsApp Button -->
+<a class="w-full py-3 px-4 rounded-xl bg-secondary-container/25 hover:bg-secondary-container/40 text-secondary font-headline-sm text-body-sm font-semibold flex items-center justify-center gap-2 transition-colors" href="https://wa.me/393478901234?text=Salve%20Oltre%20Drone%2C%20vorrei%20informazioni%20sul%20servizio%20di%20Viticoltura%204.0%20per%20la%20mia%20cantina%20in%20Oltrep%C3%B2%20Pavese." rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Parla Subito con il Pilota Agronomo su WhatsApp</span>
+</a>
+<div class="flex items-center justify-center gap-3 pt-1 text-outline">
+<span class="inline-flex items-center gap-1 font-label-badge text-[10px]">
+<span class="material-symbols-outlined text-[12px] text-secondary">verified_user</span> Pilota Certificato EASA
+        </span>
+<span class="inline-flex items-center gap-1 font-label-badge text-[10px]">
+<span class="material-symbols-outlined text-[12px] text-primary-container">shield</span> Polizza Professionale Attiva
+        </span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  let selectedGoal = 'Zonazione Vigore & Vendemmia';
+
+  function selectGoal(buttonElement, goalName) {
+    selectedGoal = goalName;
+    const chips = document.querySelectorAll('.goal-chip');
+    chips.forEach(chip => {
+      chip.classList.remove('bg-primary-container', 'text-on-primary-container', 'active');
+      chip.classList.add('bg-surface-container', 'text-on-surface-variant');
+      const icon = chip.querySelector('.material-symbols-outlined');
+      if (icon) icon.classList.add('opacity-0');
+    });
+
+    buttonElement.classList.remove('bg-surface-container', 'text-on-surface-variant');
+    buttonElement.classList.add('bg-primary-container', 'text-on-primary-container', 'active');
+    const activeIcon = buttonElement.querySelector('.material-symbols-outlined');
+    if (activeIcon) activeIcon.classList.remove('opacity-0');
+  }
+
+  function submitVineyardInquiry() {
+    const company = document.getElementById('companyName').value;
+    const zone = document.getElementById('vineyardZone').value;
+    const hectares = document.getElementById('hectares').value;
+    const phone = document.getElementById('contactPhone').value;
+
+    const toast = document.getElementById('formSuccessToast');
+    if (toast) {
+      toast.classList.remove('hidden');
+    }
+
+    const whatsappText = encodeURIComponent(
+      `Richiesta Rilievo Viticolo Oltre Drone:%0A` +
+      `- Cantina: ${company}%0A` +
+      `- Zona: ${zone}%0A` +
+      `- Ettari: ${hectares} ha%0A` +
+      `- Telefono: ${phone}%0A` +
+      `- Obiettivo: ${selectedGoal}`
+    );
+
+    setTimeout(() => {
+      window.open(`https://wa.me/393478901234?text=${whatsappText}`, '_blank');
+    }, 1200);
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a class="flex-1 flex flex-col items-center justify-center h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="oltre-drone---rilievi-aerei-di-precisione-&amp;-termografia" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Home</span></a><a aria-current="page" class="flex-1 flex flex-col items-center justify-center h-11 transition-colors text-primary-container font-semibold" data-path="viticoltura-4.0-&amp;-monitoraggio-vigneti" href="#"><span class="material-symbols-outlined text-[22px]">agriculture</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Viticoltura</span></a><a class="flex-1 flex flex-col items-center justify-center h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="servizi" href="#servizi-grid"><span class="material-symbols-outlined text-[22px]">layers</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Servizi</span></a><a class="flex-1 flex flex-col items-center justify-center h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="casi-studio" href="#showcase"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Casi Studio</span></a><a class="flex-1 flex flex-col items-center justify-center h-11 text-secondary hover:text-secondary-fixed transition-colors" data-path="contatto-whatsapp" href="https://wa.me/393330000000"><span class="material-symbols-outlined text-[22px]">chat</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">WhatsApp</span></a></div></nav></body></html>

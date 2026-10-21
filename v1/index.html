@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="it"><head><meta name="robots" content="noindex, nofollow"/>
+<meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Oltre Drone | Precision UAV Operations</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#0f131c;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#7bd0ff", "secondary-container": "#00a572", "on-secondary": "#003824", "on-tertiary": "#552100", "on-primary-fixed-variant": "#004c69", "primary-container": "#38bdf8", "inverse-primary": "#00668a", "on-error": "#690005", "outline-variant": "#3e484f", "inverse-on-surface": "#2c303a", "on-tertiary-fixed-variant": "#783200", "on-primary": "#00354a", "inverse-surface": "#dfe2ef", "tertiary-fixed-dim": "#ffb690", "surface-container-lowest": "#0a0e17", "secondary-fixed-dim": "#4edea3", "surface-dim": "#0f131c", "on-tertiary-container": "#743000", "on-error-container": "#ffdad6", "on-tertiary-fixed": "#341100", "outline": "#87929a", "on-secondary-container": "#00311f", "primary-fixed": "#c4e7ff", "error": "#ffb4ab", "on-surface-variant": "#bdc8d1", "tertiary-container": "#ff975d", "surface-container": "#1c1f29", "tertiary-fixed": "#ffdbca", "tertiary": "#ffbf9e", "surface-container-highest": "#31353f", "background": "#0f131c", "surface": "#0f131c", "surface-container-low": "#181b25", "on-secondary-fixed-variant": "#005236", "error-container": "#93000a", "on-surface": "#dfe2ef", "surface-container-high": "#262a34", "surface-tint": "#7bd0ff", "on-primary-container": "#004965", "on-background": "#dfe2ef", "on-primary-fixed": "#001e2c", "surface-bright": "#353943", "secondary-fixed": "#6ffbbe", "primary": "#8ed5ff", "on-secondary-fixed": "#002113", "secondary": "#4edea3", "surface-variant": "#31353f" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-sm": "0.5rem", "margin": "3rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "space-xl": "2.5rem", "margin-mobile": "1.25rem", "space-md": "1rem" }, fontFamily: { "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "label-metric-val": ["JetBrains Mono"], "headline-xl": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "label-badge": ["JetBrains Mono"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-telemetry": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, fontSize: { "headline-xl-mobile": ["2.25rem", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "800" }], "headline-md": ["1.75rem", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }], "label-metric-val": ["1.5rem", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-xl": ["3.5rem", { lineHeight: "1.1", letterSpacing: "-0.03em", fontWeight: "800" }], "headline-sm": ["1.25rem", { lineHeight: "1.4", letterSpacing: "0", fontWeight: "600" }], "body-sm": ["0.875rem", { lineHeight: "1.5", letterSpacing: "0", fontWeight: "400" }], "label-badge": ["0.75rem", { lineHeight: "1.2", letterSpacing: "0.08em", fontWeight: "600" }], "headline-lg": ["2.5rem", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg-mobile": ["1.75rem", { lineHeight: "1.25", letterSpacing: "-0.01em", fontWeight: "700" }], "label-telemetry": ["0.875rem", { lineHeight: "1.4", letterSpacing: "0.05em", fontWeight: "500" }], "body-lg": ["1.125rem", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }], "body-md": ["1rem", { lineHeight: "1.6", letterSpacing: "0", fontWeight: "400" }] } } } };</script></head><body class="bg-background text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col"><header class="fixed top-0 w-full z-50 pt-safe bg-surface-container-lowest/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex flex-col justify-center min-w-0"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span><span class="font-headline-sm text-headline-sm tracking-tight text-on-surface uppercase truncate font-bold">Oltre Drone</span></div><div class="flex items-center gap-1.5 mt-0.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-label-badge text-label-badge tracking-wider uppercase text-on-surface-variant truncate">Certificato EASA UAS</span></div></div><div class="flex items-center gap-space-xs"><a class="h-11 px-3.5 rounded bg-primary-container hover:bg-primary text-on-primary-container flex items-center justify-center font-headline-sm text-body-sm font-semibold tracking-tight transition-colors" data-path="richiesta-preventivo" href="preventivo.html"><span class="material-symbols-outlined text-[18px] mr-1">flight_takeoff</span><span>Preventivo</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Menu Operazioni" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-on-surface rounded transition-colors"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div></header><main class="flex-1 w-full bg-background pt-16 pb-24 relative"><div class="flex flex-col w-full text-on-surface">
+<!-- HERO SECTION -->
+<section class="relative w-full px-gutter-mobile pt-4 pb-8 flex flex-col gap-5 overflow-hidden">
+<!-- Ambient aerospace glow -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<div class="absolute top-40 right-[-20%] w-60 h-60 bg-secondary/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- Certification header badge -->
+<div class="inline-flex items-center gap-2 self-start px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-badge text-label-badge tracking-wider uppercase text-on-surface">EASA UAS STS • Oltrepò Pavese &amp; Nord Italia</span>
+</div>
+<!-- Main Hero Headings -->
+<div class="flex flex-col gap-2.5">
+<h1 class="font-headline-xl-mobile text-headline-xl-mobile tracking-tight text-on-surface">
+        Rilievi Aerei di Precisione, <span class="text-primary">Termografia</span> &amp; Viticoltura 4.0
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Flotta Enterprise DJI Mavic 3T RTK. L'accuratezza metrologica centimetrica unita a oltre 20 anni di esperienza fotografica e documentaristica sul campo.
+      </p>
+</div>
+<!-- Primary CTAs -->
+<div class="flex flex-col gap-2.5 pt-1">
+<a class="h-12 w-full px-5 rounded-lg bg-primary-container hover:bg-primary text-on-primary-container font-headline-sm text-body-md font-bold flex items-center justify-center gap-2 shadow-lg transition-all active:scale-[0.98]" href="#servizi-grid">
+<span class="material-symbols-outlined text-[20px]">radar</span>
+<span>Esplora i Servizi Operativi</span>
+</a>
+<a class="h-12 w-full px-5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-headline-sm text-body-md font-semibold flex items-center justify-center gap-2 transition-all active:scale-[0.98]" href="#showcase">
+<span class="material-symbols-outlined text-[20px] text-primary">view_in_ar</span>
+<span>Guarda i Casi Studio 3D</span>
+</a>
+</div>
+<!-- Real Field Asset Card (Inspiration Image) -->
+<div class="relative w-full rounded-xl overflow-hidden bg-surface-container-low shadow-xl mt-2">
+<div class="relative aspect-[4/5] w-full overflow-hidden bg-surface-container-lowest">
+<img alt="DJI Mavic 3 Enterprise RTK con radiocomando RC Pro posizionato sul campo con vista sui vigneti dell'Oltrepò Pavese" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3IHinDtWnBzmOvQmsa9_uZoqAI2acYeLLjlpGOt2rSVv2KKlFUpFssp9Areu4kUihJeH4GVSzgNuFQXlbuEZClgcWAFpuAqtp-4cbJNsKJ2kerJBcf3a2ncpaLHVU36iiLJNYKHZIUHMnYQvlepREvcRuZXV_stKTKLKryYJtA7G_36g0Nf7Qyh5mtukcaYoQiainJ5hRyiN5KHeCEHwSnnpOjVOJdC_5K-aGcp_NJ_OZ27PpJI5P1vVJFElZFzr8Aa8"/>
+<!-- Subtle gradient overlay for telemetry legibility -->
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest/40 pointer-events-none"></div>
+<!-- Telemetry HUD Overlay: Top Ribbon -->
+<div class="absolute top-3 inset-x-3 flex items-center justify-between pointer-events-none">
+<div class="flex items-center gap-1.5 px-2.5 py-1 rounded bg-surface-container-lowest/85 backdrop-blur-md">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-badge text-[11px] uppercase tracking-wider text-secondary">RTK FIX • ±1.2cm</span>
+</div>
+<div class="px-2 py-1 rounded bg-surface-container-lowest/85 backdrop-blur-md font-label-badge text-[11px] text-on-surface">
+            NTRIP CONNECTED
+          </div>
+</div>
+<!-- Telemetry HUD Overlay: Lower Card Info -->
+<div class="absolute bottom-3 inset-x-3 p-3 rounded-lg bg-surface-container-lowest/90 backdrop-blur-md flex flex-col gap-1.5 shadow-lg">
+<div class="flex items-center justify-between">
+<span class="font-label-badge text-[10px] uppercase tracking-widest text-primary">DJI M3T RTK • MISSION LOG</span>
+<span class="font-label-badge text-[10px] text-on-surface-variant">44°58'48"N 9°09'12"E</span>
+</div>
+<div class="flex items-center justify-between">
+<p class="font-headline-sm text-body-sm font-bold text-on-surface">Colline di Casteggio / Montebello</p>
+<span class="font-label-badge text-[11px] font-semibold text-secondary">ALT 184m AGL</span>
+</div>
+<div class="grid grid-cols-3 gap-2 pt-1.5 border-t border-outline-variant/30 text-center">
+<div>
+<span class="block font-label-badge text-[9px] text-on-surface-variant uppercase">Sensore</span>
+<span class="font-label-telemetry text-body-sm text-on-surface font-semibold">640×512 IR</span>
+</div>
+<div>
+<span class="block font-label-badge text-[9px] text-on-surface-variant uppercase">GSD</span>
+<span class="font-label-telemetry text-body-sm text-on-surface font-semibold">1.1 cm/px</span>
+</div>
+<div>
+<span class="block font-label-badge text-[9px] text-on-surface-variant uppercase">Vento</span>
+<span class="font-label-telemetry text-body-sm text-on-surface font-semibold">3.8 m/s</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Stats Metric Bar (Horizontal Scroll / Compact) -->
+<div class="grid grid-cols-2 gap-2.5 pt-1">
+<div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1 shadow-sm">
+<div class="flex items-center gap-1.5 text-secondary">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span class="font-label-badge text-[11px] uppercase tracking-wider font-semibold">EASA STS-01/02</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Operazioni Specific &amp; Open A1-A2-A3 autorizzate</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1 shadow-sm">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">my_location</span>
+<span class="font-label-badge text-[11px] uppercase tracking-wider font-semibold">&lt; 1.5 cm RTK</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Precisione geodetica assoluta su capisaldi</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1 shadow-sm">
+<div class="flex items-center gap-1.5 text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">thermostat</span>
+<span class="font-label-badge text-[11px] uppercase tracking-wider font-semibold">LWIR 640×512</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Termocamera radiometrica certificata &lt;50mK</p>
+</div>
+<div class="p-3 rounded-lg bg-surface-container flex flex-col gap-1 shadow-sm">
+<div class="flex items-center gap-1.5 text-on-surface">
+<span class="material-symbols-outlined text-[18px]">shield</span>
+<span class="font-label-badge text-[11px] uppercase tracking-wider font-semibold">Assicurazione</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">Massimale aeronautico professionale conforme UE</p>
+</div>
+</div>
+</section>
+<!-- SERVIZI CHIAVE (BENTO SECTION) -->
+<section class="w-full px-gutter-mobile py-8 bg-surface-container-lowest flex flex-col gap-5" id="servizi-grid">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">Aree di Intervento</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">
+        Servizi Specializzati per Professionisti &amp; Imprese
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Protocolli di volo rigorosi con elaborazione fotogrammetrica avanzata e reportistica asseverata.
+      </p>
+</div>
+<!-- Bento Stack -->
+<div class="flex flex-col gap-3.5">
+<!-- Card 1: Agricoltura & Viticoltura -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container/20 text-secondary font-label-badge text-[11px] uppercase font-bold tracking-wider">
+            Viticoltura &amp; Agri 4.0
+          </span>
+<span class="font-label-telemetry text-body-sm text-secondary font-semibold">Res. 1.2 cm/px</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Monitoraggio Vigneti &amp; Stress Idrico</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Mappatura multispettro e calcolo indici vegetativi (NDVI, NDRE), zonazione del vigore per vendemmie selettive e individuazione precoce delle fallanze nell'Oltrepò vitivinicolo.
+          </p>
+</div>
+<div class="w-full h-28 rounded-lg overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="High-altitude drone multispectral aerial map of terraced vineyards in Oltrepò Pavese Italy showing chlorophyll vigor health index gradient from deep green to emerald in cinematic sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzW9TvzncSRahHMeUcZbeMn2ISBi7S6qzLo0l2_IwqInvhFmbWd1eguEU4idAR4z3hSNtgBm25BnzEeJQ1obYHivRATRqZDgawFyuO3tM-MMCVKhFBgKk4GomPbQ2DFVb7xbuAuwQjMmqJbAkwrK_bpFjDhs8zna9xOD-jbbeRLsXZXT9RLH-dU9jzO7xgAKzugfqJrPN7BM-zADC7v2LBvWaRO9CGTIavTW3bciBpNteBdO9QhoQKmg"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 font-label-badge text-[10px] text-on-surface">
+            INDICE NDVI • SPETTRO NIR
+          </div>
+</div>
+</div>
+<!-- Card 2: Termografia Fotovoltaico & Edifici -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-container/20 text-tertiary font-label-badge text-[11px] uppercase font-bold tracking-wider">
+            Radiometrica &amp; Energia
+          </span>
+<span class="font-label-telemetry text-body-sm text-tertiary font-semibold">Sens. &lt; 50 mK</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Diagnosi Fotovoltaico &amp; Edilizia</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Ispezione aerea per hot-spot critici, diodi in corto circuito, stringhe bypassate su tetti industriali e parchi a terra. Termografia di involucri edili ed infiltrazioni.
+          </p>
+</div>
+<div class="w-full h-28 rounded-lg overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="Aerial drone thermal infrared radiometric imagery of commercial solar photovoltaic rooftop installation displaying ironbow heat palette with visible hot spots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuli-LnPX4DseY68qhc7D1G0qG8D_fJlM_M0_pBbaydptuMW6MaRNSGHKQ7uSX0mNJJ5GDS-exDSDEVCiC1riAG3vcp_ieCE673uSr8bHPjSL_cNYCtIcayrJEdL0Ge_Jz0Do2umx9pS__ZVxJ2t7_38W1PQPtXFCa4uMwDciCb2jydgk606dh0vIFU6x3G-I2LF1ITOeuSx0l-KZ_ihSTM-BENz_mBv--zmyXjQBiy3TaqfqZuCtdcg"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 font-label-badge text-[10px] text-tertiary">
+            PALETTE IRONBOW • CALIBRAZIONE FLIR
+          </div>
+</div>
+</div>
+<!-- Card 3: Topografia & Volumi RTK -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary font-label-badge text-[11px] uppercase font-bold tracking-wider">
+            Topografia Geodetica
+          </span>
+<span class="font-label-telemetry text-body-sm text-primary font-semibold">RTK Centimetrico</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Ortofoto Georeferenziate &amp; Rilievo Cantieri</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Generazione di modelli digitali di superficie DSM/DTM, curve di livello georeferenziate nel sistema WGS84/ETRF2000, e calcolo automatico di volumetrie di scavo e riporto.
+          </p>
+</div>
+<div class="w-full h-28 rounded-lg overflow-hidden bg-surface-container-high relative">
+<img class="w-full h-full object-cover" data-alt="Orthomosaic 3D terrain elevation model of an active infrastructure construction site and gravel quarry with topological contour lines overlay in dark aerospace aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZRhiscuJ8ziYrqURSwic_RwRpM__pUEPWhJHR8UVtNG5Cv44Brh8pw-Uq3z5JTRmpJvI-59C7vXal5MWzcUX7_i2nY3BUXeCuIGEbGZrluEfUwsxoxeNB5whELU0fGzQkyTPDXur1W76XTg4JorJHGqzBFfbgdpGeA8KjNYc5V1POtVpd1JAnF0nKcDQEgFMCzAK-t9P3E4Xp-4QyCY04kdYW5oPjxv41T1UPcO8ZLkhHWXgJ_gXXlg"/>
+<div class="absolute bottom-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 font-label-badge text-[10px] text-primary">
+            DSM ELEVATION MAP • GCP VERIFICATI
+          </div>
+</div>
+</div>
+<!-- Card 4: Gemelli Digitali & 3D Heritage -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-surface-variant text-on-surface font-label-badge text-[11px] uppercase font-bold tracking-wider">
+            Digital Twin &amp; Beni Storici
+          </span>
+<span class="font-label-telemetry text-body-sm text-on-surface font-semibold">42M Punti Mesh</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Ricostruzione 3D &amp; Beni Culturali</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Nuvole di punti dense e mesh poligonali fotorealistiche di castelli medievali, torri, facciate monumentali per archiviazione BIM e valorizzazione museale interattiva.
+          </p>
+</div>
+</div>
+<!-- Card 5: Storytelling Aereo Cantine -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed-dim/20 text-tertiary font-label-badge text-[11px] uppercase font-bold tracking-wider">
+            4K Broadcast Cinema
+          </span>
+<span class="font-label-telemetry text-body-sm text-tertiary font-semibold">10-Bit D-Log M</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-bold">Storytelling Aereo per Cantine &amp; Territorio</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Riprese aeree ad alta sensibilità dinamica per video istituzionali di eccellenze enologiche, strutture ricettive di charme e paesaggi dell'Appennino Pavese.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- SHOWCASE INTERATTIVO: CONFRONTO FOTOVOLTAICO & VIEWER 3D -->
+<section class="w-full px-gutter-mobile py-8 flex flex-col gap-5" id="showcase">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider">Strumenti di Analisi</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">
+        Showcase Interattivo sul Campo
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Tocca per confrontare il visibile RGB con i dati radiometrici aerei elaborati dai nostri payload.
+      </p>
+</div>
+<!-- Filter Pills (Touch-optimized) -->
+<div class="flex gap-2 overflow-x-auto pb-1 scrollbar-none">
+<button class="px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-badge text-label-badge font-bold shrink-0">Tutti</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-bright text-on-surface font-label-badge text-label-badge shrink-0">Fotovoltaico</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-bright text-on-surface font-label-badge text-label-badge shrink-0">Viticoltura</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-bright text-on-surface font-label-badge text-label-badge shrink-0">Topografia RTK</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container hover:bg-surface-bright text-on-surface font-label-badge text-label-badge shrink-0">3D Heritage</button>
+</div>
+<!-- Interactive Case Study 1: RGB vs Thermal Slider -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-badge text-[10px] uppercase text-primary tracking-wider">Caso Studio 01</span>
+<h3 class="font-headline-sm text-body-md font-bold text-on-surface">Ispezione Impianto FV 1.2 MW - Broni (PV)</h3>
+</div>
+<span class="px-2 py-1 rounded bg-secondary-container/20 text-secondary font-label-badge text-[10px] font-bold">COMPLETO</span>
+</div>
+<!-- Before / After Touch Mockup Container -->
+<div class="relative w-full h-56 rounded-lg overflow-hidden select-none bg-surface-container-lowest" id="thermal-compare-box">
+<!-- RGB Layer (Base) -->
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="High-resolution aerial optical photograph of massive solar panel array on industrial warehouse roof taken from drone camera under clear sunny day" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBL8b3pzigVVXUXaThfOu4sOfwvlFgXJEq5rKXE02oC7KGF4ZldkaeiyFEyvdQULmooxjAkniJsEoe1YwM5XJ-GwhXjunQ-yg7eD-TuhEAsZIfW8WsvJD6wSMiEsICOBBxgXz0KFV4i6Anz1eTYBqRtPV6Ft_lvjs-sXp9GXdBMl5BbdJtP4DzwFL77TqDQG2vTQsCzvJTkTBGScnOGbPtbllGp0yEaIWsGd7IfmhFo6O5y_qLNHVWWMQ"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-surface-container-lowest/80 font-label-badge text-[10px] text-on-surface font-bold">
+          RGB VISIBILE (48MP)
+        </div>
+<!-- Thermal IR Layer (Clip-path or overlay manipulated via slider) -->
+<div class="absolute inset-y-0 left-0 overflow-hidden w-1/2" id="thermal-overlay">
+<div class="relative w-[100vw] h-full max-w-[calc(100vw-2.5rem)]">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Drone thermal infrared radiometric orthomosaic of industrial solar array in vibrant ironbow color ramp showing highlighted orange yellow hotspot defect modules" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2UtCvjdEYDSS1-dLnT8PopNCvtKsVnbOvdTC2NDzU2XbFvSD7isUhdqGl7EB8noX7O3RxLN6HWSNt9FADG9rZ3dHCILJtAfwH1wsAyd0_0wYfNGV5YW1AMGH0yW85RfrzgM-89zqaadWQLqfnvZgbLM8UVNR8SSkTNiyQ3Job44N79Ip3bwN1UR77HKEeTRNrKQyZUXymEitg88Ho09ABc0a1aZ0N7LivyutaMM2c93dznHhlpMDE5Q"/>
+<div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-tertiary-container text-on-tertiary font-label-badge text-[10px] font-bold">
+              IR TERMICO (640×512)
+            </div>
+</div>
+</div>
+<!-- Split Divider Line & Handle -->
+<div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-0.5 bg-primary-container flex items-center justify-center cursor-ew-resize" id="thermal-handle">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container shadow-lg flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">code</span>
+</div>
+</div>
+</div>
+<!-- Interactive Instruction & Slider Input -->
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between text-on-surface-variant font-label-badge text-[10px]">
+<span>← SCORRI PER CONFRONTARE LE IMMAGINI →</span>
+<span class="text-tertiary font-semibold">HOT-SPOT: +34.2°C DELTA</span>
+</div>
+<input aria-label="Slider comparativo visibile e infrarosso" class="w-full h-1.5 bg-surface-container-high rounded appearance-none cursor-pointer accent-primary" id="thermal-slider" max="95" min="5" type="range" value="50"/>
+</div>
+<!-- Inspection Telemetry Outcome -->
+<div class="grid grid-cols-3 gap-2 pt-2 border-t border-outline-variant/20">
+<div class="text-center p-2 rounded bg-surface-container-low">
+<span class="font-label-badge text-[10px] text-on-surface-variant block">Moduli</span>
+<span class="font-label-telemetry text-body-sm font-bold text-on-surface">3.420</span>
+</div>
+<div class="text-center p-2 rounded bg-surface-container-low">
+<span class="font-label-badge text-[10px] text-on-surface-variant block">Difetti Rilevati</span>
+<span class="font-label-telemetry text-body-sm font-bold text-tertiary">4 Hot-Spot</span>
+</div>
+<div class="text-center p-2 rounded bg-surface-container-low">
+<span class="font-label-badge text-[10px] text-on-surface-variant block">Tempo Volo</span>
+<span class="font-label-telemetry text-body-sm font-bold text-secondary">38 Minuti</span>
+</div>
+</div>
+</div>
+<!-- Case Study 2: Digital Twin 3D Viewer Simulation -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-3 shadow-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-badge text-[10px] uppercase text-primary tracking-wider">Caso Studio 02</span>
+<h3 class="font-headline-sm text-body-md font-bold text-on-surface">Rilievo Fotogrammetrico Castello Medievale</h3>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-variant font-label-badge text-[10px] text-on-surface">BIM READY</span>
+</div>
+<div class="relative w-full h-52 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="Dense 3D point cloud wireframe photogrammetry model of historic medieval stone fortress and surrounding Italian hill town with blue coordinate vertex grid dots" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEtWJ2TB9xV2_BN9AV01Ss89LIloF8kQzTXsS-b-kVGcexkiEW3E-9tn8rZ9KGIztjS73AmNU3h5xL-B4pI41jGQ8CaU-hLQmlndKYPInLoTgl7PvtLy2wTrOiTB5S4d6QtxLhFYlRzMSo0p336fPiQ7xlAADvPnU_eRWNiRNN-D_yPTOVRRphB_rCE34oPDwk0W3jPJ924fRxrydtd-sGXEeJQ1CeQrKQho26qK4OCuQcAIRNI0WteQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent flex items-end justify-between p-3">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-badge text-[11px] text-on-surface font-semibold">Simulatore Mesh 3D</span>
+</div>
+<button class="px-3 py-1 rounded bg-primary-container text-on-primary-container font-headline-sm text-body-sm font-bold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-[16px]">3d_rotation</span>
+<span>Ruota Modello</span>
+</button>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Digitalizzazione ad altissima densità per catalogazione della Sovrintendenza: 1.480 fotogrammi RTK fusi in 42 milioni di punti georiferiti con precisione millimetrica.
+      </p>
+</div>
+</section>
+<!-- FLOTTA & STRUMENTAZIONE ENTERPRISE -->
+<section class="w-full px-gutter-mobile py-8 bg-surface-container-lowest flex flex-col gap-5">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">Avionica &amp; Hardware</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">
+        Dotazione Tecnologica di Riferimento
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Nessun compromesso: aeromobili a pilotaggio remoto di classe Enterprise per operare in sicurezza anche in condizioni meteo complesse.
+      </p>
+</div>
+<!-- Drone Spec Sheet Card -->
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-4 shadow-md">
+<div class="flex items-center justify-between border-b border-outline-variant/30 pb-3">
+<div>
+<span class="font-label-badge text-[10px] text-primary uppercase tracking-widest">AEROMOBILE PRINCIPALE</span>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">DJI Mavic 3 Thermal Enterprise (M3T)</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-[28px]">flight</span>
+</div>
+<!-- Specs List -->
+<div class="flex flex-col gap-3 font-body-sm text-body-sm">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-[20px] shrink-0 mt-0.5">satellite_alt</span>
+<div>
+<strong class="text-on-surface block">Modulo GNSS RTK Integrato</strong>
+<span class="text-on-surface-variant">Sincronizzazione orizzontale/verticale a livello millimetrico via correzione di rete NTRIP H24.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">heat_pump</span>
+<div>
+<strong class="text-on-surface block">Sensore Radiometrico Infrarosso</strong>
+<span class="text-on-surface-variant">LWIR 640×512 @ 30Hz con accuratezza termica di ±2°C e misurazione puntuale punto-per-punto.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">photo_camera</span>
+<div>
+<strong class="text-on-surface block">Doppia Camera Ottica (Grandangolo + Zoom 56x)</strong>
+<span class="text-on-surface-variant">Sensore 48 MPixel 1/2" CMOS per ispezioni di tralicci ed isolatori senza avvicinamento a rischio.</span>
+</div>
+</div>
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-on-surface text-[20px] shrink-0 mt-0.5">settings_remote</span>
+<div>
+<strong class="text-on-surface block">DJI RC Pro Enterprise Ground Station</strong>
+<span class="text-on-surface-variant">Display ad alta luminosità (1.000 nits) antiriflesso per monitoraggio nitido sotto piena luce solare.</span>
+</div>
+</div>
+</div>
+<!-- Comparison Chart: GSD Accuracy -->
+<div class="p-3.5 rounded-lg bg-surface-container-low flex flex-col gap-2.5 mt-1">
+<span class="font-label-badge text-[11px] uppercase tracking-wider text-on-surface-variant font-semibold">
+          Confronto Accuratezza Cartografica a Terra (GSD)
+        </span>
+<!-- Bar Traditional Drone -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-body-sm font-label-badge text-[11px]">
+<span class="text-on-surface-variant">Drone Commerciale Standard (Solo GPS)</span>
+<span class="text-error font-semibold">±15 - 25 cm</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="w-[85%] h-full bg-outline"></div>
+</div>
+</div>
+<!-- Bar Oltre Drone RTK -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between text-body-sm font-label-badge text-[11px]">
+<span class="text-primary font-bold">Oltre Drone Flotta RTK (Centimetrico)</span>
+<span class="text-secondary font-bold">±1.2 - 1.8 cm</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="w-[12%] h-full bg-secondary"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FORM PREVENTIVO VELOCE MOBILE -->
+<section class="w-full px-gutter-mobile py-8 flex flex-col gap-5" id="preventivo">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-badge text-label-badge text-secondary uppercase tracking-wider">Richiesta Preventivo</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold">
+        Pianifica la Tua Missione di Volo
+      </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Risposta entro 12 ore con studio di fattibilità dello spazio aereo (D-Flight / NOTAM) e quotazione trasparente.
+      </p>
+</div>
+<!-- Interactive Form -->
+<form class="p-4 rounded-xl bg-surface-container flex flex-col gap-3.5 shadow-md" onsubmit="event.preventDefault(); alert('Richiesta inviata con successo! Un nostro pilota certificato vi contatterà a breve.');">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-badge text-[11px] uppercase tracking-wider text-on-surface-variant" for="nome">Nome e Cognome / Ragione Sociale *</label>
+<input class="w-full h-11 px-3.5 rounded bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/40 font-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" id="nome" placeholder="Es. Dott. Marco Rossi - Studio Tecnico" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-badge text-[11px] uppercase tracking-wider text-on-surface-variant" for="contatto">Telefono o Email di Riferimento *</label>
+<input class="w-full h-11 px-3.5 rounded bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/40 font-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" id="contatto" placeholder="Es. +39 333 1234567 o email@azienda.it" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-badge text-[11px] uppercase tracking-wider text-on-surface-variant" for="servizio">Tipologia di Operazione Desiderata</label>
+<select class="w-full h-11 px-3.5 rounded bg-surface-container-low text-on-surface font-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" id="servizio">
+<option value="vigneto">Monitoraggio Vigneti &amp; Viticoltura 4.0</option>
+<option value="termografia">Diagnosi Termografica Fotovoltaico / Edifici</option>
+<option value="topografia">Rilievo Topografico RTK / Volumi Cantieri</option>
+<option value="heritage">Gemello Digitale 3D &amp; Beni Storici</option>
+<option value="video">Riprese Video 4K &amp; Storytelling Territoriale</option>
+<option value="altro">Altro / Consulenza Aeronautica Specifica</option>
+</select>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-badge text-[11px] uppercase tracking-wider text-on-surface-variant" for="localita">Comune / Area del Rilievo</label>
+<input class="w-full h-11 px-3.5 rounded bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/40 font-body-sm focus:outline-none focus:bg-surface-container-high transition-colors" id="localita" placeholder="Es. Casteggio, Stradella, Pavia, Voghera, Milano..." type="text"/>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-badge text-[11px] uppercase tracking-wider text-on-surface-variant" for="note">Dettagli Operativi (Superficie, Urgenza)</label>
+<textarea class="w-full p-3.5 rounded bg-surface-container-low text-on-surface placeholder:text-on-surface-variant/40 font-body-sm focus:outline-none focus:bg-surface-container-high transition-colors resize-none" id="note" placeholder="Descrivi brevemente l'estensione dell'area, eventuali vincoli o l'obiettivo del rilievo..." rows="3"></textarea>
+</div>
+<button class="w-full h-12 mt-1 rounded bg-primary-container hover:bg-primary text-on-primary-container font-headline-sm text-body-md font-bold flex items-center justify-center gap-2 shadow-lg transition-all active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Richiedi Studio di Fattibilità Gratuito</span>
+</button>
+</form>
+<!-- Quick Direct Contact Triggers -->
+<div class="flex flex-col gap-2.5 pt-1">
+<a class="h-12 w-full px-4 rounded-lg bg-secondary-container/20 hover:bg-secondary-container/30 text-secondary font-headline-sm text-body-sm font-bold flex items-center justify-center gap-2 transition-colors" href="https://wa.me/393330000000" target="_blank">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+<span>Contatto Immediato WhatsApp (+39 347 1234567)</span>
+</a>
+<div class="grid grid-cols-2 gap-2">
+<a class="h-11 px-3 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-body-sm font-semibold flex items-center justify-center gap-1.5 transition-colors truncate" href="#email" onclick="event.preventDefault(); window.location.href=['mai','lto:','in','fo@','oltre','drone.it'].join('');">
+<span class="material-symbols-outlined text-[18px] text-primary">mail</span>
+<span class="truncate">info<!-- anti-spam -->&#64;<!-- anti-spam -->oltredrone&#46;it</span>
+</a>
+<a class="h-11 px-3 rounded bg-surface-container hover:bg-surface-bright text-on-surface font-body-sm font-semibold flex items-center justify-center gap-1.5 transition-colors" href="tel:+393471234567">
+<span class="material-symbols-outlined text-[18px] text-secondary">phone</span>
+<span>Pronto Volo Urgenze</span>
+</a>
+</div>
+</div>
+</section>
+<!-- OPERATIONAL GEOGRAPHIC COVERAGE (LOCAL MAP DATA) -->
+<section class="w-full px-gutter-mobile py-6 bg-surface-container-lowest flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">map</span>
+<span class="font-headline-sm text-body-md font-bold text-on-surface">Base Operativa &amp; Raggio d'Azione</span>
+</div>
+<span class="font-label-badge text-[11px] text-on-surface-variant">PAVIA • NORD ITALIA</span>
+</div>
+<!-- Styled map container -->
+<div class="w-full h-44 rounded-xl overflow-hidden bg-cover bg-center relative shadow-md" data-location="Oltrepò Pavese, Italy" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_-wGgFRenS2x95APyQZpteshCue6Qb5huWbzHern1WgoMRyLBK8iCXqHh_4AeazRPcsxwh8-ScT4qJ7KyFU0ZUEyhtCaEroAJgqp8jj5tONHAEHL4d-WjBPs9B8eLORUAknBbjP6iLzJ8z71Bli3Z_N-TlrqSwIZXISaKYam7O6GKSDvN8Pvl_2BcvQEbwxMtO4HwZupmpVX-VTR38yFlHoW4qJ_KMkGJcwtNM9DquxPuVNRhslnQeA')">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 p-2.5 rounded bg-surface-container-lowest/90 backdrop-blur-md flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm font-bold text-on-surface">Oltrepò Pavese • Lombardia</span>
+<span class="font-label-badge text-[10px] text-on-surface-variant">Interventi rapidi a Pavia, Milano, Piacenza, Alessandria</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary-container/20 text-secondary font-label-badge text-[10px] font-bold">RAGGIO 150 KM</span>
+</div>
+</div>
+</section>
+<!-- TESTIMONIALS / FIDUCIA TERRITORIALE -->
+<section class="w-full px-gutter-mobile py-6 flex flex-col gap-4">
+<div class="flex flex-col gap-1">
+<span class="font-label-badge text-label-badge text-primary uppercase tracking-wider">Esperienza Verificata</span>
+<h2 class="font-headline-lg-mobile text-body-md font-bold text-on-surface">Dicono dei Nostri Rilievi</h2>
+</div>
+<div class="p-4 rounded-xl bg-surface-container flex flex-col gap-2.5 shadow-sm">
+<div class="flex items-center gap-1 text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+        "I rilievi multispettrali e termici di Oltre Drone ci hanno permesso di calibrare l'irrigazione d'emergenza su 14 ettari di Pinot Nero, evitando un collasso fogliare durante la siccità estiva. Metodologia impeccabile."
+      </p>
+<div class="flex items-center justify-between pt-1 border-t border-outline-variant/20">
+<span class="font-headline-sm text-body-sm font-bold text-on-surface">Azienda Agricola • Canneto Pavese</span>
+<span class="font-label-badge text-[10px] text-secondary">VENDEMMIA 2024</span>
+</div>
+</div>
+</section>
+<!-- FOOTER AZIENDALE COMPLETO -->
+<footer class="w-full px-gutter-mobile pt-8 pb-10 bg-surface-container-lowest flex flex-col gap-6 border-t border-outline-variant/20 mt-4">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface uppercase">Oltre Drone</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Precision UAV Operations, Aerofotogrammetria Georiferita, Diagnosi Termografica Infrarossa e Monitoraggio Viticolo.
+      </p>
+<span class="font-label-badge text-[11px] text-primary tracking-widest mt-1">
+        LAT: 44.9872° N • LON: 9.1561° E • ELEV: 210m
+      </span>
+</div>
+<!-- Legal & Compliance Badges -->
+<div class="p-3.5 rounded-lg bg-surface-container flex flex-col gap-2 text-on-surface-variant font-body-sm">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-badge text-[11px] font-bold uppercase tracking-wider">Conformità Regolatoria EASA / ENAC</span>
+</div>
+<p class="text-[12px] leading-relaxed">
+        Operatore UAS registrato sul portale D-Flight con polizze assicurative professionali aeronautiche a norma del Regolamento UE 2019/947 per scenari standard STS e categoria Specific.
+      </p>
+</div>
+<!-- Social & Links -->
+<div class="flex items-center justify-between text-on-surface-variant pt-2 border-t border-outline-variant/20">
+<div class="flex items-center gap-3">
+<a aria-label="Instagram" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</a>
+<a aria-label="LinkedIn" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">work</span>
+</a>
+<a aria-label="YouTube" class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-[18px]">smart_display</span>
+</a>
+</div>
+<a class="font-label-badge text-[11px] text-primary hover:underline uppercase tracking-wider font-semibold" href="#preventivo">
+        Torna su ↑
+      </a>
+</div>
+<div class="text-center font-label-badge text-[11px] text-outline pt-2">
+      © 2025 Oltre Drone (www.oltredrone.it). Tutti i diritti riservati. P.IVA e Dati Operatore Registrati.
+    </div>
+</footer>
+<!-- Interactive Slider Script -->
+<script>
+    (function initThermalSlider() {
+      const slider = document.getElementById('thermal-slider');
+      const overlay = document.getElementById('thermal-overlay');
+      const handle = document.getElementById('thermal-handle');
+
+      if (!slider || !overlay || !handle) return;
+
+      const updateSlider = (val) => {
+        overlay.style.width = val + '%';
+        handle.style.left = val + '%';
+      };
+
+      slider.addEventListener('input', (e) => {
+        updateSlider(e.target.value);
+      });
+
+      // Quick touch support for immediate delightful tactile feedback
+      const box = document.getElementById('thermal-compare-box');
+      if (box) {
+        let isTouching = false;
+        const setPos = (clientX) => {
+          const rect = box.getBoundingClientRect();
+          let percent = ((clientX - rect.left) / rect.width) * 100;
+          percent = Math.max(0, Math.min(100, percent));
+          slider.value = percent;
+          updateSlider(percent);
+        };
+
+        box.addEventListener('touchstart', (e) => {
+          isTouching = true;
+          setPos(e.touches[0].clientX);
+        }, { passive: true });
+
+        box.addEventListener('touchmove', (e) => {
+          if (isTouching) {
+            setPos(e.touches[0].clientX);
+          }
+        }, { passive: true });
+
+        window.addEventListener('touchend', () => { isTouching = false; });
+      }
+    })();
+  </script>
+</div></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.5)]" data-active-classes="text-primary-container font-semibold"><div class="h-16 px-gutter-mobile flex items-center justify-around"><a aria-current="page" class="flex-1 flex flex-col items-center justify-center h-11 transition-colors text-primary-container font-semibold" data-path="servizi" href="#servizi-grid"><span class="material-symbols-outlined text-[22px]">layers</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Servizi</span></a><a class="flex-1 flex flex-col items-center justify-center h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="casi-studio" href="#showcase"><span class="material-symbols-outlined text-[22px]">analytics</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Casi Studio</span></a><a class="flex-1 flex flex-col items-center justify-center h-11 text-on-surface-variant hover:text-on-surface transition-colors" data-path="flotta" href="chi-siamo.html"><span class="material-symbols-outlined text-[22px]">precision_manufacturing</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">Flotta</span></a><a class="flex-1 flex flex-col items-center justify-center h-11 text-secondary hover:text-secondary-fixed transition-colors" data-path="contatto-whatsapp" href="https://wa.me/393330000000"><span class="material-symbols-outlined text-[22px]">chat</span><span class="font-label-badge text-[10px] uppercase mt-0.5 tracking-wider">WhatsApp</span></a></div></nav></body></html>
