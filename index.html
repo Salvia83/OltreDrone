@@ -436,7 +436,7 @@
 
     <!-- Action Buttons & Socials -->
     <section class="actions">
-      <a href="mailto:info@oltredrone.it" class="btn-contact" onclick="if(typeof gtag==='function') gtag('event', 'click_contact_email', {'event_category': 'lead', 'event_label': 'email_preventivo'});">
+      <a href="#contatto" class="btn-contact" onclick="event.preventDefault(); if(typeof gtag==='function') gtag('event', 'click_contact_email', {'event_category': 'lead', 'event_label': 'email_preventivo'}); const u=['in','fo'].join(''); const d=['oltre','drone','.it'].join(''); window.location.href='mai'+'lto:'+u+'@'+d;">
         ✉️ Contattaci per Informazioni e Preventivi
       </a>
 
