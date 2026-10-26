@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Oltre Drone</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-lowest": "#ffffff", "primary": "#316b00", "tertiary-fixed-dim": "#edc22e", "tertiary": "#745c00", "background": "#f9f9ff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-primary-fixed-variant": "#235100", "on-error-container": "#93000a", "surface-dim": "#d7dae3", "error": "#ba1a1a", "surface": "#f9f9ff", "primary-container": "#71b344", "on-secondary-container": "#630400", "on-tertiary-fixed": "#241a00", "surface-bright": "#f9f9ff", "secondary": "#b22b19", "on-secondary-fixed-variant": "#8f0f03", "primary-fixed-dim": "#94d965", "on-primary-fixed": "#0a2000", "on-error": "#ffffff", "tertiary-fixed": "#ffe089", "secondary-fixed-dim": "#ffb4a7", "surface-variant": "#dfe2ec", "outline-variant": "#c1c9b6", "secondary-fixed": "#ffdad4", "on-surface-variant": "#41493a", "surface-container": "#ebeef7", "primary-fixed": "#aff67d", "surface-container-low": "#f1f3fd", "on-tertiary-container": "#473700", "inverse-primary": "#94d965", "on-background": "#181c23", "inverse-on-surface": "#eef0fa", "inverse-surface": "#2d3138", "surface-tint": "#316b00", "on-tertiary-fixed-variant": "#574500", "surface-container-highest": "#dfe2ec", "on-primary-container": "#1b4100", "on-tertiary": "#ffffff", "outline": "#727a69", "on-secondary-fixed": "#400200", "surface-container-high": "#e5e8f2", "on-surface": "#181c23", "secondary-container": "#ff624a", "tertiary-container": "#c59e00" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "margin": "3rem" }, fontFamily: { "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "headline-lg": ["Playfair Display"], "label-caption": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Playfair Display"], "display-lg": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"] }, fontSize: { "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "label-caption": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(78,68,52,0.05)]"><div class="h-20 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Oltre Drone Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmiW8NDuYFDzkn6Lc6OeIk01YTq0zXdgh0ZrFcXtebrN5UTOiIeIoTAY_p5BFuov9vF9-GJU5LdkQJgG00grOWHbxi4RrR1jJbXmbzbQ5VZSMIo-QwDX8Ji9xeVSnSSerW9xut_VBbph2t0i-gvVELObzGLg7qXrWH3JFSe7lfqs9Ad1duc8KElZZoeZjeUTzMy_2w4PvKSr909bvNiRXZ1i3sUzjnP7mF_hY_t1Aww2ucCeeBmczW"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Oltre Drone</span><span class="font-label-caption text-label-caption text-outline tracking-wider uppercase">Home</span></div></div><div class="flex items-center gap-space-xs"><a class="hidden sm:flex items-center gap-1.5 h-11 px-space-md bg-secondary-container text-on-secondary rounded-full font-label-md text-label-md transition-all" data-path="contatti" href="#"><span class="material-symbols-outlined text-[18px]">mail</span><span>Scrivimi</span></a><div class="flex items-center gap-2 pl-space-xs pr-space-sm py-1 bg-surface-container-low rounded-full"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMZrGW0oomRbANdF7PKeHQlxMP7oArofWXzdwEy0Pn612nH9MpFCUwrrkTQCZmGo0CLRtPSWgnHHvOvQYIVqhwB4iaTdWtq-c6CKtWefTf2tM2QCInja_0TL1T_lWK6setjyqW6vTX7AJXKy0JaTas5BZCrcKTYyIBQISAHiqwr5owDtyj1HOuWCzyGVvaC40hPCrAGxW6sflUuLaC8vxBKGDPVJwPYZXq5-s7GEh3HcCNc3DtIZix"/><div class="hidden xs:flex flex-col pr-1"><span class="font-label-caption text-label-caption text-on-surface leading-none font-semibold">Luca</span><span class="font-label-caption text-[9px] text-primary leading-none mt-0.5">Pilota &amp; Foto</span></div></div><button aria-label="Menu Navigazione" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" id="menu-btn"><span class="material-symbols-outlined text-[22px]">menu</span></button></div></div><div class="hidden bg-surface-container-lowest/95 backdrop-blur-xl px-margin-mobile py-space-md shadow-[0_12px_32px_-8px_rgba(78,68,52,0.12)] rounded-b-3xl" id="drawer-nav"><nav class="flex flex-col gap-space-xs font-label-lg text-label-lg"><a class="flex items-center justify-between p-space-sm rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" data-path="home" href="#"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">explore</span>1. Home (Guardare oltre)</span><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></a><a class="flex items-center justify-between p-space-sm rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" data-path="agricoltura-vigneti" href="#"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container">eco</span>2. Agricoltura &amp; Vigneti</span><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></a><a class="flex items-center justify-between p-space-sm rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" data-path="studi-tecnici-3d" href="#"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-container">view_in_ar</span>3. Studi Tecnici &amp; 3D</span><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></a><a class="flex items-center justify-between p-space-sm rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" data-path="controllo-termico" href="#"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">thermostat</span>4. Controllo Termico</span><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></a><a class="flex items-center justify-between p-space-sm rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" data-path="foto-video-contatti" href="#"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">photo_camera</span>5. Foto, Video &amp; Contatti</span><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></a></nav></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- 1. Hero Section -->
+<section class="px-margin-mobile pt-space-md pb-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="inline-flex items-center gap-1.5 self-start px-space-md py-1 bg-surface-container rounded-full text-on-surface-variant font-label-caption text-label-caption uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+<span>Tecnologia aerea &amp; Cuore rurale</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">
+        Uno sguardo nuovo sul tuo terreno, sui tuoi vigneti e sui tuoi progetti.
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+        Uniamo oltre 20 anni di esperienza nella fotografia e nei documentari alla precisione dei droni di ultima generazione. Per chi lavora la terra e per chi progetta sul territorio.
+      </p>
+</div>
+<!-- Hero Image with Organic Canvas Frame -->
+<div class="relative w-full rounded-[24px] overflow-hidden bg-surface-container shadow-[0_12px_32px_-8px_rgba(78,68,52,0.08)]">
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/40 via-transparent to-transparent z-10 pointer-events-none"></div>
+<img alt="Vigneti collinari dell'Oltrepò Pavese visti dall'alto" class="w-full h-64 object-cover object-center transform scale-[1.02] transition-transform duration-700 ease-out" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXl5HgzxVLlq9njE7jLDYalFQ3ZParVR6xZ913HfKJts1lwMheSTRFwxXGncUTftmF1S5LMIo8V_n-xSrfVkbk14MPbgnl6p8SFNk9EoX0lFW8rNS6aCii5sXfvNWhG5EjhIn2IMa_U8iic08SicS69GRLUsXBF-1XBRST-zqQiyo23PCSpHLljj8AKiVedEFqF_lwqaJhvYInYFF7z52sNEUdRG54zPSSAi5KK9Owx-kezC1CZzm5"/>
+<div class="absolute bottom-3 left-3 right-3 z-20 flex items-center justify-between text-on-primary font-label-caption text-label-caption px-3 py-1.5 rounded-full bg-on-surface/50 backdrop-blur-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">flight</span>
+          Oltrepò Pavese
+        </span>
+<span class="opacity-90">Volo a vista &amp; Sensori RTK</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<a class="flex items-center justify-center gap-2 h-12 px-space-xl bg-secondary text-on-secondary rounded-full font-label-lg text-label-lg shadow-[0_4px_14px_rgba(178,43,25,0.25)] active:scale-[0.98] transition-all" href="#servizi">
+<span>Esplora i servizi</span>
+<span class="material-symbols-outlined text-[18px]">south</span>
+</a>
+<a class="flex items-center justify-center gap-2 h-12 px-space-xl bg-surface-container text-on-surface rounded-full font-label-lg text-label-lg hover:bg-surface-container-high active:scale-[0.98] transition-all" href="#contatto">
+<span class="material-symbols-outlined text-[18px] text-primary">chat</span>
+<span>Parla con Luca</span>
+</a>
+</div>
+</section>
+<!-- 2. Services: "Cosa possiamo fare insieme" -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md" id="servizi">
+<div class="flex flex-col gap-1">
+<span class="font-label-caption text-label-caption text-primary uppercase tracking-widest font-semibold">I Campi di Volo</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Cosa possiamo fare insieme</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Soluzioni chiare senza complicazioni digitali, per il campo e per l'ufficio.</p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Card Verde: Vigneto -->
+<div class="relative overflow-hidden p-space-lg rounded-[24px] bg-[#71b344]/15 shadow-[0_4px_20px_rgba(113,179,68,0.08)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-primary-container text-on-primary font-label-caption text-label-caption font-semibold">
+            Agricoltura di Precisione
+          </span>
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">eco</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-[20px] text-on-surface font-semibold">Occhio sul Vigneto e Agricoltura</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Vedere dall'alto dove le piante soffrono la sete, contare le piante mancanti e conoscere le pendenze reali del terreno con analisi vegetativa chiara.
+          </p>
+</div>
+<div class="pt-2 flex items-center gap-2 text-primary font-label-md text-label-md">
+<span>Monitoraggio filari e suolo</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card Blu: Studi Tecnici -->
+<div class="relative overflow-hidden p-space-lg rounded-[24px] bg-[#335ca7]/15 shadow-[0_4px_20px_rgba(51,92,167,0.08)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#335ca7] text-on-primary font-label-caption text-label-caption font-semibold">
+            Geometria &amp; RTK
+          </span>
+<div class="w-10 h-10 rounded-full bg-[#335ca7]/20 flex items-center justify-center text-[#335ca7]">
+<span class="material-symbols-outlined text-[22px]">domain</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-[20px] text-on-surface font-semibold">Mappe e Modelli 3D per Studi Tecnici</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Rilievi dall'alto con precisione centimetrica (RTK) di tetti, facciate, ponti, strade e fabbricati per geometri, architetti e ingegneri.
+          </p>
+</div>
+<div class="pt-2 flex items-center gap-2 text-[#335ca7] font-label-md text-label-md">
+<span>Nuvole di punti e ortofoto geo-riferite</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card Corallo: Controllo Termico -->
+<div class="relative overflow-hidden p-space-lg rounded-[24px] bg-secondary-fixed/50 shadow-[0_4px_20px_rgba(178,43,25,0.08)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary text-on-secondary font-label-caption text-label-caption font-semibold">
+            Termografia Radiometrica
+          </span>
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">thermostat</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-[20px] text-on-surface font-semibold">Controllo Termico dall'Alto</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Un occhio a infrarossi per trovare subito pannelli solari difettosi, perdite di calore o infiltrazioni sui tetti senza salire su scale o ponteggi.
+          </p>
+</div>
+<div class="pt-2 flex items-center gap-2 text-secondary font-label-md text-label-md">
+<span>Ispezione sicura senza ponteggi</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card Giallo Sole: Foto e Video -->
+<div class="relative overflow-hidden p-space-lg rounded-[24px] bg-tertiary-fixed/40 shadow-[0_4px_20px_rgba(116,92,0,0.08)] flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary text-on-tertiary font-label-caption text-label-caption font-semibold">
+            Documentari &amp; Immagine
+          </span>
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">movie</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-[20px] text-on-surface font-semibold">Foto e Video che Raccontano</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Riprese aeree d'autore, nate da oltre vent'anni di fotografia e documentari, per valorizzare cantine, agriturismi e aziende con sguardi suggestivi.
+          </p>
+</div>
+<div class="pt-2 flex items-center gap-2 text-tertiary font-label-md text-label-md">
+<span>Fotografia narrativa &amp; Emozione</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Section: "Chi c'è dietro Oltre Drone (Mettiamoci la faccia)" -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="p-space-lg bg-surface-container rounded-[24px] shadow-[0_8px_24px_rgba(78,68,52,0.06)] flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-16 h-16 rounded-full overflow-hidden shrink-0 shadow-md">
+<img alt="Ritratto di Luca, pilota e documentarista" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMZrGW0oomRbANdF7PKeHQlxMP7oArofWXzdwEy0Pn612nH9MpFCUwrrkTQCZmGo0CLRtPSWgnHHvOvQYIVqhwB4iaTdWtq-c6CKtWefTf2tM2QCInja_0TL1T_lWK6setjyqW6vTX7AJXKy0JaTas5BZCrcKTYyIBQISAHiqwr5owDtyj1HOuWCzyGVvaC40hPCrAGxW6sflUuLaC8vxBKGDPVJwPYZXq5-s7GEh3HcCNc3DtIZix"/>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[20px] text-on-surface font-semibold leading-tight">Luca</span>
+<span class="font-label-caption text-label-caption text-primary font-medium">Pilota Certificato &amp; Fotografo</span>
+<span class="font-label-caption text-[10px] text-on-surface-variant mt-0.5">Oltre 20 anni di racconto per immagini</span>
+</div>
+</div>
+<div class="relative pl-3 bg-surface-container-lowest/60 rounded-xl p-space-sm">
+<span class="material-symbols-outlined text-primary-container text-[26px] opacity-70">format_quote</span>
+<blockquote class="font-body-md text-body-md text-on-surface leading-relaxed italic">
+          "Dietro Oltre Drone ci sono io, Luca. Per oltre 20 anni ho raccontato storie ed emozioni attraverso la fotografia e i documentari. Oggi porto quella stessa cura per l'immagine dentro i droni tecnologici più avanzati (con sensori termici e posizionamento centimetrico RTK), per dare ad agricoltori e tecnici risposte chiare, belle da vedere e facili da usare."
+        </blockquote>
+</div>
+<div class="flex items-center gap-2 px-space-sm py-2 rounded-xl bg-surface-container-low text-on-surface-variant font-label-caption text-label-caption">
+<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
+<span>Vivo e volo tra le colline dell'Oltrepò Pavese e nel Nord Italia.</span>
+</div>
+</div>
+</section>
+<!-- 4. Case Studies Skeleton: "I Nostri Lavori sul Campo" -->
+<section class="px-margin-mobile py-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col gap-1">
+<span class="font-label-caption text-label-caption text-outline font-semibold uppercase tracking-widest">Trasparenza sul campo</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Casi Studio &amp; Rilievi Reali</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Trasparenza prima di tutto: qui troverai i rilievi documentati passo dopo passo.
+      </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Card 1 -->
+<div class="p-space-md rounded-[24px] bg-surface-container-low flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Caso Studio 1</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-caption text-[10px]">Territorio e Infrastrutture</span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest/80 flex flex-col items-center justify-center text-center gap-2 py-6">
+<span class="material-symbols-outlined text-outline text-[26px]">grid_goldenratio</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs italic">
+            [Spazio Caso Studio Reale: qui inseriremo foto/modello 3D e descrizione del rilievo]
+          </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-md rounded-[24px] bg-surface-container-low flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Caso Studio 2</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-caption text-[10px]">Edifici e Architettura 3D</span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest/80 flex flex-col items-center justify-center text-center gap-2 py-6">
+<span class="material-symbols-outlined text-outline text-[26px]">apartment</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs italic">
+            [Spazio Caso Studio Reale: qui inseriremo foto/modello 3D e descrizione del rilievo]
+          </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-md rounded-[24px] bg-surface-container-low flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Caso Studio 3</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-caption text-[10px]">Vigneti e Collina</span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container-lowest/80 flex flex-col items-center justify-center text-center gap-2 py-6">
+<span class="material-symbols-outlined text-outline text-[26px]">agriculture</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs italic">
+            [Spazio Caso Studio Reale: qui inseriremo foto/modello 3D e descrizione del rilievo]
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Warm Closing Call to Action -->
+<section class="px-margin-mobile pt-space-sm pb-space-lg flex flex-col" id="contatto">
+<div class="p-space-lg rounded-[24px] bg-surface-container-high flex flex-col gap-space-md shadow-[0_12px_28px_rgba(78,68,52,0.06)]">
+<div class="flex flex-col gap-1 text-center items-center">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[24px]">explore</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Hai un appezzamento o un fabbricato da guardare dall'alto?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Raccontami cosa ti serve. Possiamo valutare insieme la fattibilità del volo e il tipo di analisi più utile per la tua terra o il tuo cantiere.
+        </p>
+</div>
+<div class="flex flex-col gap-space-xs">
+<a class="flex items-center justify-center gap-2 h-12 px-space-xl bg-primary text-on-primary rounded-full font-label-lg text-label-lg active:scale-[0.98] transition-all" href="mailto:info@oltredrone.it?subject=Richiesta%20informazioni%20Oltre%20Drone">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span>Scrivimi via Email</span>
+</a>
+<div class="flex items-center justify-center gap-2 py-2.5 px-space-sm rounded-full bg-tertiary-fixed/50 text-on-tertiary-container font-label-caption text-label-caption font-medium">
+<span class="material-symbols-outlined text-[16px] text-tertiary">chat</span>
+<span>WhatsApp diretto per messaggi e note vocali in attivazione</span>
+</div>
+</div>
+<div class="pt-2 flex items-center justify-center gap-2 text-outline font-label-caption text-[11px] text-center">
+<span class="material-symbols-outlined text-primary text-[15px]">verified</span>
+<span>Operatore registrato ed assicurato secondo normative ENAC / EASA</span>
+</div>
+</div>
+</section>
+</div><footer class="mt-space-xl px-margin-mobile py-space-xl bg-surface-container-low/70 rounded-t-[28px] flex flex-col gap-space-lg text-center items-center"><div class="flex flex-col items-center gap-1"><span class="font-headline-sm text-headline-sm text-on-surface">Oltre Drone</span><p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Tecnologia aerea di precisione e passione per la terra dell'Oltrepò Pavese.</p></div><div class="flex flex-wrap justify-center items-center gap-space-sm"><a class="flex items-center gap-2 px-space-md py-2.5 bg-surface-container-lowest rounded-full shadow-[0_4px_12px_-2px_rgba(78,68,52,0.04)] font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="mailto:info@oltredrone.it"><span class="material-symbols-outlined text-primary text-[18px]">mail</span><span>info@oltredrone.it</span></a><div class="flex items-center gap-2 px-space-md py-2.5 bg-tertiary-fixed/60 rounded-full font-label-caption text-label-caption text-on-tertiary-container font-semibold"><span class="material-symbols-outlined text-[16px]">chat</span><span>WhatsApp dedicato in arrivo</span></div></div><div class="flex items-center justify-center gap-space-md"><a aria-label="Instagram @oltredrone" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-lowest text-on-surface hover:text-secondary transition-colors shadow-[0_4px_12px_-2px_rgba(78,68,52,0.04)]" href="https://instagram.com/oltredrone" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="Facebook" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-lowest text-on-surface hover:text-primary transition-colors shadow-[0_4px_12px_-2px_rgba(78,68,52,0.04)]" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="LinkedIn" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-lowest text-on-surface hover:text-primary transition-colors shadow-[0_4px_12px_-2px_rgba(78,68,52,0.04)]" href="#"><span class="material-symbols-outlined text-[20px]">work</span></a></div><div class="flex items-center gap-2 px-space-md py-2 bg-surface-container-high/60 rounded-full text-outline font-label-caption text-label-caption"><span class="material-symbols-outlined text-[16px] text-primary">verified</span><span>Operatore certificato ENAC / EASA</span></div><p class="font-label-caption text-label-caption text-outline">© 2024 Oltre Drone - www.oltredrone.it. Tutti i diritti riservati.</p></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(78,68,52,0.06)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-20 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] transition-colors text-primary font-semibold" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">flight_takeoff</span><span class="font-label-caption text-label-caption">Home</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="agricoltura-vigneti" href="#"><span class="material-symbols-outlined text-[24px]">agriculture</span><span class="font-label-caption text-label-caption">Vigneti</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="studi-tecnici-3d" href="#"><span class="material-symbols-outlined text-[24px]">architecture</span><span class="font-label-caption text-label-caption">Rilievi 3D</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="controllo-termico" href="#"><span class="material-symbols-outlined text-[24px]">solar_power</span><span class="font-label-caption text-label-caption">Termico</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="foto-video-contatti" href="#"><span class="material-symbols-outlined text-[24px]">quickreply</span><span class="font-label-caption text-label-caption">Contatti</span></a></div></nav><script>document.getElementById('menu-btn')?.addEventListener('click',function(){document.getElementById('drawer-nav')?.classList.toggle('hidden');});</script></body></html>

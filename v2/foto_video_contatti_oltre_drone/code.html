@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="it"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Oltre Drone</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;family=Plus+Jakarta+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#f9f9ff;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "surface-container-lowest": "#ffffff", "primary": "#316b00", "tertiary-fixed-dim": "#edc22e", "tertiary": "#745c00", "background": "#f9f9ff", "on-secondary": "#ffffff", "error-container": "#ffdad6", "on-primary": "#ffffff", "on-primary-fixed-variant": "#235100", "on-error-container": "#93000a", "surface-dim": "#d7dae3", "error": "#ba1a1a", "surface": "#f9f9ff", "primary-container": "#71b344", "on-secondary-container": "#630400", "on-tertiary-fixed": "#241a00", "surface-bright": "#f9f9ff", "secondary": "#b22b19", "on-secondary-fixed-variant": "#8f0f03", "primary-fixed-dim": "#94d965", "on-primary-fixed": "#0a2000", "on-error": "#ffffff", "tertiary-fixed": "#ffe089", "secondary-fixed-dim": "#ffb4a7", "surface-variant": "#dfe2ec", "outline-variant": "#c1c9b6", "secondary-fixed": "#ffdad4", "on-surface-variant": "#41493a", "surface-container": "#ebeef7", "primary-fixed": "#aff67d", "surface-container-low": "#f1f3fd", "on-tertiary-container": "#473700", "inverse-primary": "#94d965", "on-background": "#181c23", "inverse-on-surface": "#eef0fa", "inverse-surface": "#2d3138", "surface-tint": "#316b00", "on-tertiary-fixed-variant": "#574500", "surface-container-highest": "#dfe2ec", "on-primary-container": "#1b4100", "on-tertiary": "#ffffff", "outline": "#727a69", "on-secondary-fixed": "#400200", "surface-container-high": "#e5e8f2", "on-surface": "#181c23", "secondary-container": "#ff624a", "tertiary-container": "#c59e00" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin-mobile": "1.25rem", "gutter": "1.5rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "margin": "3rem" }, fontFamily: { "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "headline-lg-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "headline-lg": ["Playfair Display"], "label-caption": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-lg-mobile": ["Playfair Display"], "display-lg": ["Playfair Display"], "label-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"] }, fontSize: { "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-sm": ["22px", { "lineHeight": "30px", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "label-caption": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }] } } } }</script></head><body class="bg-surface text-on-surface font-body-md text-body-md flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(78,68,52,0.05)]"><div class="h-20 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img alt="Oltre Drone Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmiW8NDuYFDzkn6Lc6OeIk01YTq0zXdgh0ZrFcXtebrN5UTOiIeIoTAY_p5BFuov9vF9-GJU5LdkQJgG00grOWHbxi4RrR1jJbXmbzbQ5VZSMIo-QwDX8Ji9xeVSnSSerW9xut_VBbph2t0i-gvVELObzGLg7qXrWH3JFSe7lfqs9Ad1duc8KElZZoeZjeUTzMy_2w4PvKSr909bvNiRXZ1i3sUzjnP7mF_hY_t1Aww2ucCeeBmczW"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight">Oltre Drone</span><span class="font-label-caption text-label-caption text-outline tracking-wider uppercase">Foto, Video &amp; Contatti</span></div></div><div class="flex items-center gap-space-xs"><a class="hidden sm:flex items-center gap-1.5 h-11 px-space-md bg-secondary-container text-on-secondary rounded-full font-label-md text-label-md transition-all" data-path="contatti" href="#"><span class="material-symbols-outlined text-[18px]">mail</span><span>Scrivimi</span></a><div class="flex items-center gap-2 pl-space-xs pr-space-sm py-1 bg-surface-container-low rounded-full"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMZrGW0oomRbANdF7PKeHQlxMP7oArofWXzdwEy0Pn612nH9MpFCUwrrkTQCZmGo0CLRtPSWgnHHvOvQYIVqhwB4iaTdWtq-c6CKtWefTf2tM2QCInja_0TL1T_lWK6setjyqW6vTX7AJXKy0JaTas5BZCrcKTYyIBQISAHiqwr5owDtyj1HOuWCzyGVvaC40hPCrAGxW6sflUuLaC8vxBKGDPVJwPYZXq5-s7GEh3HcCNc3DtIZix"/><div class="hidden xs:flex flex-col pr-1"><span class="font-label-caption text-label-caption text-on-surface leading-none font-semibold">Luca</span><span class="font-label-caption text-[9px] text-primary leading-none mt-0.5">Pilota &amp; Foto</span></div></div><button aria-label="Menu Navigazione" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" id="menu-btn"><span class="material-symbols-outlined text-[22px]">menu</span></button></div></div><div class="hidden bg-surface-container-lowest/95 backdrop-blur-xl px-margin-mobile py-space-md shadow-[0_12px_32px_-8px_rgba(78,68,52,0.12)] rounded-b-3xl" id="drawer-nav"><nav class="flex flex-col gap-space-xs font-label-lg text-label-lg"><a class="flex items-center justify-between p-space-sm rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" data-path="home" href="#"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">explore</span>1. Home (Guardare oltre)</span><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></a><a class="flex items-center justify-between p-space-sm rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" data-path="agricoltura-vigneti" href="#"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container">eco</span>2. Agricoltura &amp; Vigneti</span><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></a><a class="flex items-center justify-between p-space-sm rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" data-path="studi-tecnici-3d" href="#"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary-container">view_in_ar</span>3. Studi Tecnici &amp; 3D</span><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></a><a class="flex items-center justify-between p-space-sm rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" data-path="controllo-termico" href="#"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary">thermostat</span>4. Controllo Termico</span><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></a><a class="flex items-center justify-between p-space-sm rounded-xl hover:bg-surface-container-low text-on-surface transition-colors" data-path="foto-video-contatti" href="#"><span class="flex items-center gap-3"><span class="material-symbols-outlined text-tertiary">photo_camera</span>5. Foto, Video &amp; Contatti</span><span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span></a></nav></div></header><main class="flex-1 flex flex-col relative w-full pt-20 pb-28 bg-surface"><div class="flex flex-col w-full">
+<div class="px-margin-mobile flex flex-col gap-space-lg">
+<!-- Header tematico & Storytelling -->
+<section class="flex flex-col gap-space-md pt-space-sm">
+<div class="inline-flex items-center gap-2 self-start px-3.5 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">wb_sunny</span>
+<span class="font-label-caption text-label-caption uppercase tracking-wider font-semibold">Vent'anni di sguardo documentario</span>
+</div>
+<div class="flex flex-col gap-2">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-tight">
+          Vent'anni di fotografia, oggi anche dal cielo.
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Riprese aeree cinematografiche e servizi fotografici per cantine, agriturismi, eventi e valorizzazione del territorio dell'Oltrepò Pavese. Realizzati da chi conosce la luce, il ritmo e l'emozione del racconto visivo per mestiere, prima ancora dell'avvento dei droni.
+        </p>
+</div>
+<!-- Card Ritratto Luca -->
+<div class="rounded-[24px] bg-surface-container-low p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="relative w-full aspect-square rounded-[20px] overflow-hidden shadow-sm">
+<img alt="Luca, fotografo e pilota droni tra i vigneti dell'Oltrepò Pavese" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMZrGW0oomRbANdF7PKeHQlxMP7oArofWXzdwEy0Pn612nH9MpFCUwrrkTQCZmGo0CLRtPSWgnHHvOvQYIVqhwB4iaTdWtq-c6CKtWefTf2tM2QCInja_0TL1T_lWK6setjyqW6vTX7AJXKy0JaTas5BZCrcKTYyIBQISAHiqwr5owDtyj1HOuWCzyGVvaC40hPCrAGxW6sflUuLaC8vxBKGDPVJwPYZXq5-s7GEh3HcCNc3DtIZix"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-on-primary">
+<div class="flex flex-col">
+<span class="font-title-md text-title-md font-semibold text-surface-container-lowest leading-snug">Luca</span>
+<span class="font-label-caption text-label-caption text-tertiary-fixed font-medium">Pilota Certificato &amp; Fotografo</span>
+</div>
+<div class="flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md text-on-surface">
+<span class="material-symbols-outlined text-primary text-[14px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-caption text-label-caption font-semibold">Oltrepò Pavese</span>
+</div>
+</div>
+</div>
+<div class="flex items-start gap-3 px-1">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[20px]">format_quote</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic leading-relaxed pt-1">
+            "Volare non serve ad allontanarsi dalla terra, ma a comprenderla con uno sguardo più limpido e riconoscente."
+          </p>
+</div>
+</div>
+</section>
+<!-- Sezione Contatti Semplice e Amichevole -->
+<section class="flex flex-col gap-space-md mt-space-sm">
+<div class="flex flex-col gap-1.5">
+<div class="inline-flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span class="font-label-caption text-label-caption uppercase tracking-wider font-semibold">Parliamone Insieme</span>
+</div>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">
+          Facciamo due chiacchiere sul tuo progetto
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Raccontami cosa devi osservare, misurare o raccontare: troviamo insieme la soluzione più adatta.
+        </p>
+</div>
+<!-- Modulo di contatto rapido -->
+<form class="rounded-[24px] bg-surface-container-lowest p-space-lg shadow-md flex flex-col gap-space-md" id="contact-form" onsubmit="event.preventDefault(); document.getElementById('feedback-state').classList.remove('hidden'); document.getElementById('form-fields').classList.add('hidden');">
+<div class="flex flex-col gap-space-md" id="form-fields">
+<!-- Nome -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5" for="contact-name">
+<span>Il tuo nome</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline text-[20px]">person</span>
+<input class="w-full h-14 pl-12 pr-4 rounded-full bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container" id="contact-name" placeholder="Es. Marco o Francesca" required="" type="text"/>
+</div>
+</div>
+<!-- Email o recapito -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold flex items-center gap-1.5" for="contact-endpoint">
+<span>La tua email o recapito</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-outline text-[20px]">alternate_email</span>
+<input class="w-full h-14 pl-12 pr-4 rounded-full bg-surface-container-low text-on-surface font-body-md text-body-md placeholder:text-outline focus:outline-none focus:bg-surface-container" id="contact-endpoint" placeholder="nome@dominio.it oppure cellulare" required="" type="text"/>
+</div>
+</div>
+<!-- Ruolo selector -->
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Chi sei?</label>
+<div class="flex flex-col gap-2" id="role-selector">
+<label class="role-option cursor-pointer flex items-center gap-3 p-3.5 rounded-2xl bg-surface-container-low text-on-surface transition-colors">
+<input checked="" class="hidden" name="role" type="radio" value="agricoltura"/>
+<div class="radio-indicator w-5 h-5 rounded-full bg-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-on-primary">check</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">wine_bar</span>
+<span class="font-label-md text-label-md">Agricoltore / Cantina</span>
+</div>
+</label>
+<label class="role-option cursor-pointer flex items-center gap-3 p-3.5 rounded-2xl bg-surface-container-low text-on-surface transition-colors">
+<input class="hidden" name="role" type="radio" value="tecnico"/>
+<div class="radio-indicator w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-transparent">check</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">straighten</span>
+<span class="font-label-md text-label-md">Studio Tecnico (Geometra / Architetto / Ingegnere)</span>
+</div>
+</label>
+<label class="role-option cursor-pointer flex items-center gap-3 p-3.5 rounded-2xl bg-surface-container-low text-on-surface transition-colors">
+<input class="hidden" name="role" type="radio" value="azienda"/>
+<div class="radio-indicator w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[14px] text-transparent">check</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[20px]">business</span>
+<span class="font-label-md text-label-md">Azienda / Altro</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Raccontami il progetto -->
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md text-on-surface font-semibold" for="contact-msg">Raccontami il tuo terreno, edificio o progetto</label>
+<textarea class="w-full p-4 rounded-2xl bg-surface-container-low text-on-surface font-body-sm text-body-sm placeholder:text-outline focus:outline-none focus:bg-surface-container resize-none" id="contact-msg" placeholder="Zona o comune, tipo di visuale o rilievo desiderato..." required="" rows="3"></textarea>
+</div>
+<!-- Pulsante invio -->
+<button class="w-full h-14 rounded-full bg-secondary-container text-on-secondary font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-sm transition-transform active:scale-[0.98]" type="submit">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Invia messaggio a Luca</span>
+</button>
+</div>
+<!-- Feedback invio riuscito (nascosto inizialmente) -->
+<div class="hidden flex flex-col items-center justify-center py-space-xl text-center gap-3" id="feedback-state">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px] text-primary">done_all</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Messaggio ricevuto!</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+            Grazie per aver condiviso la tua idea. Luca leggerà le note e si farà vivo a breve.
+          </p>
+<button class="mt-2 px-5 py-2 rounded-full bg-surface-container text-on-surface font-label-md text-label-md" onclick="document.getElementById('feedback-state').classList.add('hidden'); document.getElementById('form-fields').classList.remove('hidden');" type="button">
+            Invia un'altra nota
+          </button>
+</div>
+</form>
+<!-- Badge informativo in evidenza -->
+<div class="rounded-[24px] bg-tertiary-fixed/40 p-space-md flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-tertiary-fixed flex items-center justify-center shrink-0 text-on-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[22px]">phone_in_talk</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-tertiary-container">Contatto Diretto</span>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">
+            Numero diretto e canale WhatsApp dedicato in attivazione a breve.
+          </p>
+</div>
+</div>
+<!-- Link email diretta -->
+<a class="rounded-[24px] bg-surface-container-low p-space-md flex items-center justify-between transition-colors hover:bg-surface-container" href="mailto:info@oltredrone.it">
+<div class="flex items-center gap-3">
+<div class="w-11 h-11 rounded-full bg-surface-container-lowest flex items-center justify-center shrink-0 shadow-sm text-primary">
+<span class="material-symbols-outlined text-[20px]">drafts</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caption text-label-caption text-outline uppercase font-semibold">Posta elettronica</span>
+<span class="font-title-md text-title-md text-on-surface font-medium">info@oltredrone.it</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">arrow_forward</span>
+</a>
+<!-- Canali Social -->
+<div class="rounded-[24px] bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-3">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Segui i voli e i racconti visivi</span>
+<div class="flex flex-col gap-2">
+<a class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors" href="https://instagram.com/oltredrone" rel="noopener" target="_blank">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-[22px]">photo_camera</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Instagram</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">@oltredrone</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">open_in_new</span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[22px]">public</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">Facebook</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Oltre Drone Oltrepò</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">open_in_new</span>
+</a>
+<a class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-low hover:bg-surface-container transition-colors" href="#">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary text-[22px]">work</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md font-semibold text-on-surface">LinkedIn</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Oltre Drone Network</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px]">open_in_new</span>
+</a>
+</div>
+</div>
+<!-- Indicazione di Legge & Conformità -->
+<div class="rounded-[24px] bg-surface-container p-space-md flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-[22px] shrink-0 mt-0.5" style="font-variation-settings: 'FILL' 1;">shield_with_heart</span>
+<div class="flex flex-col gap-0.5">
+<span class="font-label-caption text-label-caption text-primary uppercase font-bold tracking-wider">Conformità Aerea &amp; Sicurezza</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+            Operatore abilitato e registrato su portale D-Flight / ENAC / EASA per operazioni aperte e specifiche.
+          </p>
+</div>
+</div>
+</section>
+</div>
+<script>
+    (function() {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+      const options = form.querySelectorAll('.role-option');
+      options.forEach(option => {
+        option.addEventListener('click', () => {
+          options.forEach(o => {
+            const ind = o.querySelector('.radio-indicator');
+            const icon = ind.querySelector('.material-symbols-outlined');
+            ind.classList.remove('bg-primary');
+            ind.classList.add('bg-surface-container-highest');
+            icon.classList.remove('text-on-primary');
+            icon.classList.add('text-transparent');
+          });
+          const currInd = option.querySelector('.radio-indicator');
+          const currIcon = currInd.querySelector('.material-symbols-outlined');
+          currInd.classList.add('bg-primary');
+          currInd.classList.remove('bg-surface-container-highest');
+          currIcon.classList.add('text-on-primary');
+          currIcon.classList.remove('text-transparent');
+        });
+      });
+    })();
+  </script>
+</div><footer class="mt-space-xl px-margin-mobile py-space-xl bg-surface-container-low/70 rounded-t-[28px] flex flex-col gap-space-lg text-center items-center"><div class="flex flex-col items-center gap-1"><span class="font-headline-sm text-headline-sm text-on-surface">Oltre Drone</span><p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">Tecnologia aerea di precisione e passione per la terra dell'Oltrepò Pavese.</p></div><div class="flex flex-wrap justify-center items-center gap-space-sm"><a class="flex items-center gap-2 px-space-md py-2.5 bg-surface-container-lowest rounded-full shadow-[0_4px_12px_-2px_rgba(78,68,52,0.04)] font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="mailto:info@oltredrone.it"><span class="material-symbols-outlined text-primary text-[18px]">mail</span><span>info@oltredrone.it</span></a><div class="flex items-center gap-2 px-space-md py-2.5 bg-tertiary-fixed/60 rounded-full font-label-caption text-label-caption text-on-tertiary-container font-semibold"><span class="material-symbols-outlined text-[16px]">chat</span><span>WhatsApp dedicato in arrivo</span></div></div><div class="flex items-center justify-center gap-space-md"><a aria-label="Instagram @oltredrone" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-lowest text-on-surface hover:text-secondary transition-colors shadow-[0_4px_12px_-2px_rgba(78,68,52,0.04)]" href="https://instagram.com/oltredrone" rel="noopener" target="_blank"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a aria-label="Facebook" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-lowest text-on-surface hover:text-primary transition-colors shadow-[0_4px_12px_-2px_rgba(78,68,52,0.04)]" href="#"><span class="material-symbols-outlined text-[20px]">public</span></a><a aria-label="LinkedIn" class="w-11 h-11 flex items-center justify-center rounded-full bg-surface-container-lowest text-on-surface hover:text-primary transition-colors shadow-[0_4px_12px_-2px_rgba(78,68,52,0.04)]" href="#"><span class="material-symbols-outlined text-[20px]">work</span></a></div><div class="flex items-center gap-2 px-space-md py-2 bg-surface-container-high/60 rounded-full text-outline font-label-caption text-label-caption"><span class="material-symbols-outlined text-[16px] text-primary">verified</span><span>Operatore certificato ENAC / EASA</span></div><p class="font-label-caption text-label-caption text-outline">© 2024 Oltre Drone - www.oltredrone.it. Tutti i diritti riservati.</p></footer></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-4px_20px_rgba(78,68,52,0.06)]" data-active-classes="text-primary font-semibold"><div class="flex justify-around items-center h-20 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="home" href="#"><span class="material-symbols-outlined text-[24px]">flight_takeoff</span><span class="font-label-caption text-label-caption">Home</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="agricoltura-vigneti" href="#"><span class="material-symbols-outlined text-[24px]">agriculture</span><span class="font-label-caption text-label-caption">Vigneti</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="studi-tecnici-3d" href="#"><span class="material-symbols-outlined text-[24px]">architecture</span><span class="font-label-caption text-label-caption">Rilievi 3D</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="controllo-termico" href="#"><span class="material-symbols-outlined text-[24px]">solar_power</span><span class="font-label-caption text-label-caption">Termico</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="foto-video-contatti" href="#"><span class="material-symbols-outlined text-[24px]">quickreply</span><span class="font-label-caption text-label-caption">Contatti</span></a></div></nav><script>document.getElementById('menu-btn')?.addEventListener('click',function(){document.getElementById('drawer-nav')?.classList.toggle('hidden');});</script></body></html>
