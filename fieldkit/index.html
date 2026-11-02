@@ -560,6 +560,7 @@
         <!-- Opzioni popolate via JS -->
       </select>
       <button class="btn-header" onclick="createNewSurvey()">➕ Nuovo</button>
+      <button class="btn-header" style="background: rgba(220, 38, 38, 0.25); border-color: rgba(220, 38, 38, 0.5); color: #fca5a5; padding: 6px 10px;" onclick="deleteCurrentSurvey()" title="Elimina rilievo selezionato">🗑️</button>
     </div>
   </header>
 
@@ -752,6 +753,11 @@
               <button class="btn-secondary" style="padding: 0 10px;" onclick="getIPadGPS()" title="Rileva con GPS iPad">📍 GPS</button>
             </div>
           </div>
+        </div>
+        <div style="margin-top: 14px; padding-top: 10px; border-top: 1px dashed var(--border); display: flex; justify-content: flex-end;">
+          <button type="button" style="background: none; border: none; color: var(--danger); font-size: 12px; cursor: pointer; text-decoration: underline; font-weight: 600;" onclick="deleteCurrentSurvey()">
+            🗑️ Elimina questo condominio / rilievo dall'elenco
+          </button>
         </div>
       </div>
 
