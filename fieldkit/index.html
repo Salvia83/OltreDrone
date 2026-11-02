@@ -529,6 +529,163 @@
       font-weight: 700;
       color: var(--primary);
     }
+
+    /* Photo Management & Ground Documentation */
+    .photo-grid-main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .photo-slot {
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+    }
+    .photo-upload-empty {
+      border: 2px dashed #cbd5e1;
+      border-radius: 12px;
+      padding: 24px 16px;
+      text-align: center;
+      background: #f8fafc;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      flex: 1;
+      min-height: 180px;
+    }
+    .photo-upload-empty:active, .photo-upload-empty:hover {
+      border-color: var(--accent);
+      background: #fff7ed;
+      transform: scale(0.99);
+    }
+    .photo-card-filled {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      background: white;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .photo-thumb-wrap {
+      position: relative;
+      width: 100%;
+      height: 180px;
+      background: #0f172a;
+      overflow: hidden;
+    }
+    .photo-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .photo-thumb:hover {
+      transform: scale(1.02);
+    }
+    .photo-tag-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(15, 23, 42, 0.85);
+      color: white;
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 10.5px;
+      font-weight: 700;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .photo-zoom-hint {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.65);
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+    }
+    .photo-card-body {
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      background: white;
+      flex: 1;
+    }
+    .photo-extra-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .photo-extra-card {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .photo-extra-thumb {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      cursor: pointer;
+      background: #0f172a;
+    }
+
+    /* Fullscreen Lightbox Modal */
+    .photo-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.92);
+      z-index: 9999;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .photo-modal-overlay.active {
+      display: flex;
+    }
+    .photo-modal-img {
+      max-width: 95vw;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+    }
+    .photo-modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: white;
+      color: #0f172a;
+      border: none;
+      border-radius: 50%;
+      width: 42px;
+      height: 42px;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
   </style>
 </head>
 <body>
@@ -665,6 +822,7 @@
           <div style="flex: 1;">
             <div class="check-title">Controllo Inverter a Terra: Attivo e con Produzione (kW)</div>
             <div class="check-desc">Foto al display o all'app che certifichi che l'impianto sta erogando corrente sotto carico.</div>
+            <div id="chk_inverter_badge" style="margin-top: 6px;"></div>
           </div>
         </label>
 
@@ -807,6 +965,49 @@
             <input type="text" id="flightDrone" class="form-control" value="DJI Mavic 3T RTK • LWIR 640×512 (ε=0.90)" oninput="saveCurrentData()">
           </div>
         </div>
+      </div>
+
+
+      <!-- Card Documentazione Fotografica da Terra -->
+      <div class="card">
+        <div class="card-title">
+          <span>📸 Documentazione Fotografica da Terra (iPad)</span>
+          <span style="font-size: 11px; font-weight: normal; color: var(--text-muted);">Foto scattate in tempo reale sul campo</span>
+        </div>
+        
+        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px; line-height: 1.45;">
+          Scatta le foto sul posto con la fotocamera dell'iPad oppure importale dal rullino. Vengono compresse istantaneamente per il salvataggio locale e inserite nella perizia tecnica PDF.
+        </p>
+
+        <div class="photo-grid-main">
+          <!-- Slot 1: Foto Facciata / Edificio -->
+          <div class="photo-slot" id="slotFacade">
+            <!-- Popolato da JS -->
+          </div>
+
+          <!-- Slot 2: Foto Display Inverter / Produzione -->
+          <div class="photo-slot" id="slotInverter">
+            <!-- Popolato da JS -->
+          </div>
+        </div>
+
+        <!-- Foto Aggiuntive Libere -->
+        <div style="margin-top: 18px; padding-top: 14px; border-top: 1px dashed var(--border);">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+            <strong style="font-size: 13px; color: var(--text);">Altre Foto di Dettaglio / Campo (Tetto, Botola, Cavi)</strong>
+            <button type="button" class="btn-secondary" style="font-size: 11.5px; padding: 6px 12px; display: inline-flex; align-items: center; gap: 4px;" onclick="triggerAddExtraPhoto()">
+              <span>📷 Scatta Altra Foto</span>
+            </button>
+          </div>
+          <div id="extraPhotosGrid" class="photo-extra-grid">
+            <!-- Popolato da JS -->
+          </div>
+        </div>
+
+        <!-- Input File Nascosti con accept=image/* per fotocamera iPad -->
+        <input type="file" id="inputPhotoFacade" accept="image/*" style="display:none;" onchange="onPhotoSelected('facade', event)">
+        <input type="file" id="inputPhotoInverter" accept="image/*" style="display:none;" onchange="onPhotoSelected('inverter', event)">
+        <input type="file" id="inputPhotoExtra" accept="image/*" style="display:none;" onchange="onExtraPhotoSelected(event)">
       </div>
 
       <div class="card">
@@ -985,7 +1186,20 @@
       if (!currentId || !surveys[currentId]) {
         currentId = Object.keys(surveys)[0];
       }
-      return surveys[currentId];
+      const s = surveys[currentId];
+      if (!s.photos) {
+        s.photos = {
+          facade: null,
+          facadeCaption: "Vista d'insieme fabbricato e copertura",
+          inverter: null,
+          inverterCaption: "Quadro inverter: erogazione attiva",
+          extras: []
+        };
+      }
+      if (!Array.isArray(s.photos.extras)) {
+        s.photos.extras = [];
+      }
+      return s;
     }
 
     function initApp() {
@@ -1085,6 +1299,8 @@
       if (fillEl) fillEl.style.width = percent + '%';
 
       renderAnomalies();
+      renderPhotosUI();
+      renderChecklistInverterBadge();
       renderReportPreview();
     }
 
@@ -1259,6 +1475,13 @@
         generalNotes: "",
         checks: {},
         anomalies: [],
+        photos: {
+          facade: null,
+          facadeCaption: "Vista d'insieme fabbricato e copertura",
+          inverter: null,
+          inverterCaption: "Quadro inverter: erogazione attiva",
+          extras: []
+        },
         updatedAt: new Date().toISOString()
       };
       currentId = newId;
@@ -1362,6 +1585,53 @@
         anomaliesHtml = '<p style="font-size:12px; color:var(--text-muted); margin-top:6px;">Nessuna discordanza termica critica rilevata durante il volo.</p>';
       }
 
+
+        // Render Sezione Foto a Terra nel Report Tecnico
+        let groundPhotosHtml = '';
+        const hasFacade = s.photos && s.photos.facade;
+        const hasInverter = s.photos && s.photos.inverter;
+        const extras = (s.photos && Array.isArray(s.photos.extras)) ? s.photos.extras : [];
+
+        if (hasFacade || hasInverter || extras.length > 0) {
+          let cards = '';
+          if (hasFacade) {
+            cards += `
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 6px; text-align: center;">
+                <img src="${s.photos.facade}" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px; display: block;">
+                <div style="font-size: 9.5px; font-weight: 700; color: #0f172a; margin-top: 4px;">FACCIATA & COPERTURA</div>
+                <div style="font-size: 8.5px; color: #64748b;">${s.photos.facadeCaption || 'Inquadramento generale fabbricato'}</div>
+              </div>
+            `;
+          }
+          if (hasInverter) {
+            cards += `
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 6px; text-align: center;">
+                <img src="${s.photos.inverter}" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px; display: block;">
+                <div style="font-size: 9.5px; font-weight: 700; color: #047857; margin-top: 4px;">DISPLAY INVERTER / QUADRO</div>
+                <div style="font-size: 8.5px; color: #64748b;">${s.photos.inverterCaption || ('Potenza rilevata: ' + (s.pvInverterKW || 'In erogazione'))}</div>
+              </div>
+            `;
+          }
+          extras.forEach(ex => {
+            cards += `
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 6px; text-align: center;">
+                <img src="${ex.dataUrl}" style="width: 100%; height: 120px; object-fit: cover; border-radius: 4px; display: block;">
+                <div style="font-size: 9.5px; font-weight: 700; color: #0f172a; margin-top: 4px;">DETTAGLIO DI CAMPO</div>
+                <div style="font-size: 8.5px; color: #64748b;">${ex.caption || 'Rilievo a terra'}</div>
+              </div>
+            `;
+          });
+
+          groundPhotosHtml = `
+            <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #0f172a; margin-top: 14px; border-left: 3px solid #ea580c; padding-left: 6px;">
+              Documentazione Fotografica di Supporto a Terra
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; margin-top: 8px;">
+              ${cards}
+            </div>
+          `;
+        }
+
       sheet.innerHTML = `
         <div class="report-header">
           <div>
@@ -1405,6 +1675,8 @@
           Risultanze Rilievo Termometrico
         </div>
         ${anomaliesHtml}
+
+        ${groundPhotosHtml}
 
         <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #0f172a; margin-top: 16px; border-left: 3px solid #ea580c; padding-left: 6px;">
           Note Operative & Raccomandazioni
@@ -1474,8 +1746,305 @@
       reader.readAsText(file);
     }
 
+
+    // ==========================================
+    // GESTIONE FOTOGRAFICA IPAD & COMPRESSIONE
+    // ==========================================
+    function compressImageFile(file, maxDim = 1024, quality = 0.72) {
+      return new Promise((resolve, reject) => {
+        if (!file || !file.type.startsWith('image/')) {
+          reject(new Error("Formato file non valido"));
+          return;
+        }
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          const img = new Image();
+          img.onload = function() {
+            let w = img.width;
+            let h = img.height;
+            if (w > maxDim || h > maxDim) {
+              if (w > h) {
+                h = Math.round((h * maxDim) / w);
+                w = maxDim;
+              } else {
+                w = Math.round((w * maxDim) / h);
+                h = maxDim;
+              }
+            }
+            const canvas = document.createElement('canvas');
+            canvas.width = w;
+            canvas.height = h;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(img, 0, 0, w, h);
+            const dataUrl = canvas.toDataURL('image/jpeg', quality);
+            resolve(dataUrl);
+          };
+          img.onerror = () => reject(new Error("Impossibile decodificare l'immagine"));
+          img.src = e.target.result;
+        };
+        reader.onerror = () => reject(new Error("Errore lettura file"));
+        reader.readAsDataURL(file);
+      });
+    }
+
+    async function onPhotoSelected(type, event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      try {
+        const dataUrl = await compressImageFile(file, 1024, 0.72);
+        const s = ensureCurrentSurvey();
+        if (!s.photos) s.photos = { extras: [] };
+        
+        if (type === 'facade') {
+          s.photos.facade = dataUrl;
+          if (!s.photos.facadeCaption) s.photos.facadeCaption = "Vista d'insieme fabbricato e copertura";
+        } else if (type === 'inverter') {
+          s.photos.inverter = dataUrl;
+          if (!s.photos.inverterCaption) s.photos.inverterCaption = "Quadro inverter: erogazione attiva";
+          
+          // Spunta automatica checklist Inverter
+          s.checks['c_flight_inv'] = true;
+          const chk = document.getElementById('chk_c_flight_inv');
+          if (chk) chk.checked = true;
+          const cb = document.getElementById('cb_c_flight_inv');
+          if (cb) {
+            const parent = cb.closest('.check-item');
+            if (parent) parent.classList.add('checked');
+          }
+        }
+        s.updatedAt = new Date().toISOString();
+        SafeStorage.setItem(STORAGE_KEY, JSON.stringify(surveys));
+        renderPhotosUI();
+        renderReportPreview();
+        renderChecklistInverterBadge();
+      } catch (err) {
+        alert("Errore salvataggio foto: " + err.message);
+      } finally {
+        event.target.value = '';
+      }
+    }
+
+    function removePhoto(type) {
+      if (!confirm("Rimuovere questa foto dal rilievo?")) return;
+      const s = ensureCurrentSurvey();
+      if (s.photos) {
+        s.photos[type] = null;
+        s.updatedAt = new Date().toISOString();
+        SafeStorage.setItem(STORAGE_KEY, JSON.stringify(surveys));
+        renderPhotosUI();
+        renderReportPreview();
+        renderChecklistInverterBadge();
+      }
+    }
+
+    function updatePhotoCaption(type, value) {
+      const s = ensureCurrentSurvey();
+      if (!s.photos) s.photos = { extras: [] };
+      s.photos[type + 'Caption'] = value;
+      s.updatedAt = new Date().toISOString();
+      SafeStorage.setItem(STORAGE_KEY, JSON.stringify(surveys));
+      renderReportPreview();
+    }
+
+    function triggerAddExtraPhoto() {
+      const inp = document.getElementById('inputPhotoExtra');
+      if (inp) inp.click();
+    }
+
+    async function onExtraPhotoSelected(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      try {
+        const dataUrl = await compressImageFile(file, 1024, 0.72);
+        const s = ensureCurrentSurvey();
+        if (!s.photos) s.photos = { extras: [] };
+        if (!Array.isArray(s.photos.extras)) s.photos.extras = [];
+        
+        const caption = prompt("Didascalia per questa foto (es. 'Falda Sud', 'Accesso botola', 'Quadro AC'):", "Dettaglio di campo") || "Dettaglio di campo";
+        s.photos.extras.push({
+          id: "extra_" + Date.now(),
+          dataUrl: dataUrl,
+          caption: caption,
+          time: new Date().toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' })
+        });
+        s.updatedAt = new Date().toISOString();
+        SafeStorage.setItem(STORAGE_KEY, JSON.stringify(surveys));
+        renderPhotosUI();
+        renderReportPreview();
+      } catch(err) {
+        alert("Errore salvataggio foto: " + err.message);
+      } finally {
+        event.target.value = '';
+      }
+    }
+
+    function removeExtraPhoto(id) {
+      if (!confirm("Rimuovere questa foto aggiuntiva?")) return;
+      const s = ensureCurrentSurvey();
+      if (s.photos && Array.isArray(s.photos.extras)) {
+        s.photos.extras = s.photos.extras.filter(p => p.id !== id);
+        s.updatedAt = new Date().toISOString();
+        SafeStorage.setItem(STORAGE_KEY, JSON.stringify(surveys));
+        renderPhotosUI();
+        renderReportPreview();
+      }
+    }
+
+    function updateExtraPhotoCaption(id, val) {
+      const s = ensureCurrentSurvey();
+      if (s.photos && Array.isArray(s.photos.extras)) {
+        const p = s.photos.extras.find(x => x.id === id);
+        if (p) {
+          p.caption = val;
+          s.updatedAt = new Date().toISOString();
+          SafeStorage.setItem(STORAGE_KEY, JSON.stringify(surveys));
+          renderReportPreview();
+        }
+      }
+    }
+
+    function previewFullPhoto(dataUrl, caption) {
+      const modal = document.getElementById('photoModal');
+      const img = document.getElementById('photoModalImg');
+      const cap = document.getElementById('photoModalCaption');
+      if (!modal || !img) return;
+      img.src = dataUrl;
+      if (cap) cap.textContent = caption || '';
+      modal.classList.add('active');
+    }
+
+    function closePhotoModal() {
+      const modal = document.getElementById('photoModal');
+      if (modal) modal.classList.remove('active');
+    }
+
+    function renderPhotosUI() {
+      const s = ensureCurrentSurvey();
+      if (!s.photos) s.photos = { extras: [] };
+
+      // Render Facade Slot
+      const slotF = document.getElementById('slotFacade');
+      if (slotF) {
+        if (s.photos.facade) {
+          slotF.innerHTML = `
+            <div class="photo-card-filled">
+              <div class="photo-thumb-wrap">
+                <img src="${s.photos.facade}" class="photo-thumb" onclick="previewFullPhoto('${s.photos.facade}', 'Facciata / Edificio')" alt="Facciata">
+                <span class="photo-tag-badge">🏢 FACCIATA EDIFICIO</span>
+                <span class="photo-zoom-hint">🔍 Tocca per ingrandire</span>
+              </div>
+              <div class="photo-card-body">
+                <label style="font-size: 11px; font-weight: 700; color: var(--text);">Didascalia per il Report:</label>
+                <input type="text" class="form-control" style="font-size: 11.5px; padding: 5px 8px;" value="${s.photos.facadeCaption || ''}" oninput="updatePhotoCaption('facade', this.value)" placeholder="es. Vista prospetto e tetto">
+                <div style="display: flex; gap: 8px; margin-top: 6px;">
+                  <button type="button" class="btn-secondary" style="font-size: 11px; padding: 5px 10px; flex: 1;" onclick="document.getElementById('inputPhotoFacade').click()">🔄 Sostituisci</button>
+                  <button type="button" class="btn-secondary" style="font-size: 11px; padding: 5px 10px; color: var(--danger); border-color: #fca5a5;" onclick="removePhoto('facade')">🗑️ Rimuovi</button>
+                </div>
+              </div>
+            </div>
+          `;
+        } else {
+          slotF.innerHTML = `
+            <div class="photo-upload-empty" onclick="document.getElementById('inputPhotoFacade').click()">
+              <div style="font-size: 32px; margin-bottom: 6px;">🏢</div>
+              <div style="font-weight: 700; font-size: 13.5px; color: var(--text);">Foto Facciata / Copertura</div>
+              <div style="font-size: 11px; color: var(--text-muted); margin-top: 3px; max-width: 240px;">Tocca per scattare con iPad o scegliere dal rullino</div>
+              <button type="button" class="btn-main" style="margin-top: 10px; font-size: 12px; padding: 6px 14px; pointer-events: none;">📷 Scatta / Carica</button>
+            </div>
+          `;
+        }
+      }
+
+      // Render Inverter Slot
+      const slotI = document.getElementById('slotInverter');
+      if (slotI) {
+        if (s.photos.inverter) {
+          slotI.innerHTML = `
+            <div class="photo-card-filled">
+              <div class="photo-thumb-wrap">
+                <img src="${s.photos.inverter}" class="photo-thumb" onclick="previewFullPhoto('${s.photos.inverter}', 'Display Inverter (kW)')" alt="Inverter">
+                <span class="photo-tag-badge" style="background: rgba(16, 185, 129, 0.9);">⚡ DISPLAY INVERTER</span>
+                <span class="photo-zoom-hint">🔍 Tocca per ingrandire</span>
+              </div>
+              <div class="photo-card-body">
+                <label style="font-size: 11px; font-weight: 700; color: var(--text);">Didascalia / Potenza Rilevata:</label>
+                <input type="text" class="form-control" style="font-size: 11.5px; padding: 5px 8px;" value="${s.photos.inverterCaption || ''}" oninput="updatePhotoCaption('inverter', this.value)" placeholder="es. Inverter Huawei: 4.8 kW attivi">
+                <div style="display: flex; gap: 8px; margin-top: 6px;">
+                  <button type="button" class="btn-secondary" style="font-size: 11px; padding: 5px 10px; flex: 1;" onclick="document.getElementById('inputPhotoInverter').click()">🔄 Sostituisci</button>
+                  <button type="button" class="btn-secondary" style="font-size: 11px; padding: 5px 10px; color: var(--danger); border-color: #fca5a5;" onclick="removePhoto('inverter')">🗑️ Rimuovi</button>
+                </div>
+              </div>
+            </div>
+          `;
+        } else {
+          slotI.innerHTML = `
+            <div class="photo-upload-empty" onclick="document.getElementById('inputPhotoInverter').click()">
+              <div style="font-size: 32px; margin-bottom: 6px;">⚡</div>
+              <div style="font-weight: 700; font-size: 13.5px; color: var(--text);">Foto Inverter / Quadro Elettrico</div>
+              <div style="font-size: 11px; color: var(--text-muted); margin-top: 3px; max-width: 240px;">Fotografa il display per certificare i kW erogati sotto carico</div>
+              <button type="button" class="btn-main" style="margin-top: 10px; font-size: 12px; padding: 6px 14px; pointer-events: none;">⚡ Scatta Display</button>
+            </div>
+          `;
+        }
+      }
+
+      // Render Extra Photos
+      const extraGrid = document.getElementById('extraPhotosGrid');
+      if (extraGrid) {
+        const extras = Array.isArray(s.photos.extras) ? s.photos.extras : [];
+        if (extras.length === 0) {
+          extraGrid.innerHTML = `
+            <div style="grid-column: 1 / -1; font-size: 11.5px; color: var(--text-muted); background: #f8fafc; border: 1px dashed var(--border); border-radius: 8px; padding: 12px; text-align: center;">
+              Nessuna foto aggiuntiva inserita. Tocca <em>"Scatta Altra Foto"</em> per aggiungere dettagli di botole, linee vita o quadri.
+            </div>
+          `;
+        } else {
+          extraGrid.innerHTML = extras.map(ex => `
+            <div class="photo-extra-card">
+              <div style="position: relative;">
+                <img src="${ex.dataUrl}" class="photo-extra-thumb" onclick="previewFullPhoto('${ex.dataUrl}', '${ex.caption}')" alt="${ex.caption}">
+                <span class="photo-zoom-hint">🔍 Ingrandisci</span>
+              </div>
+              <div style="padding: 8px 10px; display: flex; flex-direction: column; gap: 4px;">
+                <input type="text" class="form-control" style="font-size: 11px; padding: 4px 6px;" value="${ex.caption || ''}" oninput="updateExtraPhotoCaption('${ex.id}', this.value)" placeholder="Didascalia...">
+                <button type="button" class="btn-secondary" style="font-size: 10px; padding: 3px 6px; color: var(--danger); border-color: #fca5a5; margin-top: 2px;" onclick="removeExtraPhoto('${ex.id}')">🗑️ Elimina</button>
+              </div>
+            </div>
+          `).join('');
+        }
+      }
+    }
+
+    function renderChecklistInverterBadge() {
+      const badge = document.getElementById('chk_inverter_badge');
+      if (!badge) return;
+      const s = ensureCurrentSurvey();
+      if (s.photos && s.photos.inverter) {
+        badge.innerHTML = `
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: #ecfdf5; border: 1px solid #a7f3d0; color: #047857; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 6px; cursor: pointer;" onclick="event.preventDefault(); previewFullPhoto('${s.photos.inverter}', 'Display Inverter (kW)')">
+            <img src="${s.photos.inverter}" style="width: 24px; height: 24px; object-fit: cover; border-radius: 4px;">
+            <span>📸 Foto Inverter Registrata (Tocca per vedere)</span>
+          </div>
+        `;
+      } else {
+        badge.innerHTML = `
+          <button type="button" class="btn-secondary" style="font-size: 11px; padding: 3px 10px; border-color: #cbd5e1; display: inline-flex; align-items: center; gap: 4px;" onclick="event.preventDefault(); event.stopPropagation(); document.getElementById('inputPhotoInverter').click();">
+            <span>📷 Scatta Foto Inverter</span>
+          </button>
+        `;
+      }
+    }
+
     // Esegui immediatamente e in sicurezza
     initApp();
 </script>
+
+  <!-- Modal Lightbox Ingrandimento Foto iPad -->
+  <div id="photoModal" class="photo-modal-overlay" onclick="closePhotoModal()">
+    <button type="button" class="photo-modal-close" onclick="closePhotoModal()">✕</button>
+    <img id="photoModalImg" class="photo-modal-img" src="" alt="Dettaglio">
+    <div id="photoModalCaption" style="position: absolute; bottom: 20px; color: white; background: rgba(0,0,0,0.75); padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; text-align: center; max-width: 90vw;"></div>
+  </div>
+
 </body>
 </html>
